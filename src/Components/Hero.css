@@ -1,0 +1,337 @@
+#section-01 {
+    padding: 0;
+}
+
+.section-sub-header {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.jumbotron {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+.jumbotron-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+}
+
+.jumbotron-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.jumbotron-img.animate-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.display-1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.display-1.animate-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.display-animated {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.display-animated-in {
+    animation: display-animated-in 0.6s ease forwards;
+}
+
+@keyframes display-animated-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.lead.animate-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.section-footer {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.section-footer.animate-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.section-next {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-next-counter {
+    font-size: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.section-next-label {
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+.section-next-icon {
+    width: 16px;
+    height: 16px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.resume-download-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary);
+    color: var(--yellow);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.resume-download-btn:hover {
+    background-color: transparent;
+    color: var(--primary);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-download-btn.animate-in
+{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3rem;
+    }
+    
+    .jumbotron-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Responsive Styles */
+/* Large tablets and small laptops (992px - 1200px) */
+@media (max-width: 1200px) {
+    .display-1 {
+        font-size: 3.5rem;
+    }
+
+    .lead {
+        font-size: 1.3rem;
+    }
+
+    .jumbotron-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .section-footer {
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .display-1 {
+        font-size: 3rem;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+    }
+
+    .jumbotron-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-footer {
+        bottom: 1.25rem;
+        left: 1.25rem;
+    }
+
+    .resume-download-btn {
+        padding: 0.7rem 1.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Large phones (576px - 767px) */
+@media (max-width: 767px) {
+    .section-sub-header {
+        min-height: 90vh;
+        padding: 2rem 0;
+    }
+
+    .jumbotron {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .display-1 {
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .jumbotron-img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1.5rem;
+        transform: translateY(20px);
+    }
+
+    .section-footer {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section-next {
+        justify-content: center;
+    }
+
+    .resume-download-btn {
+        display: block;
+        width: 200px;
+        margin: 1rem auto;
+        text-align: center;
+        transform: translateY(20px);
+    }
+}
+
+/* Small phones (280px - 575px) */
+@media (max-width: 575px) {
+    .section-sub-header {
+        min-height: 85vh;
+        padding: 1.5rem 0;
+    }
+
+    .jumbotron {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .display-1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        width: 100%;
+    }
+
+    .lead {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .jumbotron-img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 1rem;
+    }
+
+    .section-footer {
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    .section-next-counter,
+    .section-next-label {
+        font-size: 0.7rem;
+    }
+
+    .resume-download-btn {
+        width: 180px;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Animation adjustments for mobile */
+@media (max-width: 767px) {
+    .jumbotron-img,
+    .display-1,
+    .lead,
+    .resume-download-btn,
+    .section-footer {
+        transform: translateY(20px);
+    }
+
+    .jumbotron-img.animate-in,
+    .display-1.animate-in,
+    .lead.animate-in,
+    .resume-download-btn.animate-in,
+    .section-footer.animate-in {
+        transform: translateY(0);
+    }
+} 

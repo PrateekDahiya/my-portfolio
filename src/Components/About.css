@@ -1,0 +1,145 @@
+.article {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.article p {
+    margin-bottom: 1.5rem;
+}
+
+.animation-translate-overline {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.animation-translate-overline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+}
+
+/* About specific styles */
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+/* Responsive styles */
+/* Large tablets and small laptops (992px - 1200px) */
+@media (max-width: 1200px) {
+    .about-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .section-body {
+        padding: 0 2rem;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .about-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .section-body {
+        padding: 0 1.5rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* Large phones (576px - 767px) */
+@media (max-width: 767px) {
+    .about-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .section-body {
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-footer {
+        padding: 1rem;
+    }
+
+    .section-next {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Small phones (280px - 575px) */
+@media (max-width: 575px) {
+    .about-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .section-body {
+        padding: 0 0.75rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-footer {
+        padding: 0.75rem;
+    }
+
+    .section-next-counter {
+        font-size: 0.8rem;
+    }
+
+    .section-next-label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation adjustments for mobile */
+@media (max-width: 767px) {
+    .animation-translate {
+        transform: translateY(30px);
+    }
+
+    .animation-item-1 {
+        transition-delay: 0.1s;
+    }
+
+    .animation-item-2 {
+        transition-delay: 0.2s;
+    }
+
+    .animation-item-3 {
+        transition-delay: 0.3s;
+    }
+
+    .animation-item-4 {
+        transition-delay: 0.4s;
+    }
+
+    .animation-item-5 {
+        transition-delay: 0.5s;
+    }
+
+    .animation-item-6 {
+        transition-delay: 0.6s;
+    }
+} 

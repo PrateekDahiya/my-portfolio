@@ -1,0 +1,30 @@
+.fact-item {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.fact-item .fact-value {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.fact-item .fact-label {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--gray-dark);
+}
+
+@media (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .fact-item .fact-value {
+        font-size: 2.5rem;
+    }
+} 

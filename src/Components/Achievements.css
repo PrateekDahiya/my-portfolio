@@ -1,0 +1,15 @@
+.achievement-item {
+    margin-bottom: 2rem;
+}
+
+.achievement-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-item .description {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    margin-bottom: 0;
+} 

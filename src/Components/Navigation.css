@@ -1,0 +1,227 @@
+.sections-nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--yellow);
+    padding: 80px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 999;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sections-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.sections-nav.animate-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.sections-nav-item {
+    margin-bottom: 0.25rem;
+}
+
+.sections-nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.sections-nav-counter {
+    margin-right: 0.5rem;
+    color: var(--gray);
+}
+
+.sections-nav-info {
+    padding: 0.1rem 1rem;
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+}
+
+.sections-nav-info a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sections-nav-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+/* Large tablets and small laptops (992px - 1200px) */
+@media (max-width: 1200px) {
+    .sections-nav-container {
+        width: 280px;
+    }
+
+    .sections-nav-link {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .sections-nav-container {
+        width: 280px;
+        transform: translateX(100%);
+    }
+
+    .sections-nav-container.is-active {
+        transform: translateX(0);
+    }
+
+    .sections-nav {
+        transform: translateX(50px);
+    }
+
+    .sections-nav-link {
+        padding: 0.75rem 1rem;
+    }
+
+    .sections-nav-info {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+/* Large phones (576px - 767px) */
+@media (max-width: 767px) {
+    .sections-nav-container {
+        width: 250px;
+        padding-top: 60px;
+    }
+
+    .sections-nav-link {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .sections-nav-counter {
+        font-size: 0.9rem;
+    }
+
+    .sections-nav-info {
+        font-size: 0.85rem;
+        padding: 0.75rem;
+    }
+
+    .sections-nav-item {
+        margin-bottom: 0.1rem;
+    }
+
+    .sections-nav {
+        padding-bottom: 1rem;
+    }
+}
+
+/* Small phones (280px - 575px) */
+@media (max-width: 575px) {
+    .sections-nav-container {
+        width: 220px;
+        padding-top: 50px;
+    }
+
+    .sections-nav-link {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .sections-nav-counter {
+        font-size: 0.85rem;
+    }
+
+    .sections-nav-info {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .sections-nav-item {
+        margin-bottom: 0.05rem;
+    }
+
+    .sections-nav {
+        padding-bottom: 0.75rem;
+    }
+}
+
+/* Animation adjustments for mobile */
+@media (max-width: 991px) {
+    .sections-nav.animate-in {
+        transform: translateX(0);
+    }
+
+    .sections-nav-item {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .sections-nav-container.is-active .sections-nav-item {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .sections-nav-item:nth-child(1) { transition-delay: 0.1s; }
+    .sections-nav-item:nth-child(2) { transition-delay: 0.2s; }
+    .sections-nav-item:nth-child(3) { transition-delay: 0.3s; }
+    .sections-nav-item:nth-child(4) { transition-delay: 0.4s; }
+    .sections-nav-item:nth-child(5) { transition-delay: 0.5s; }
+    .sections-nav-item:nth-child(6) { transition-delay: 0.6s; }
+    .sections-nav-item:nth-child(7) { transition-delay: 0.7s; }
+    .sections-nav-item:nth-child(8) { transition-delay: 0.8s; }
+    .sections-nav-item:nth-child(9) { transition-delay: 0.9s; }
+}
+
+/* Ensure proper touch targets on mobile */
+@media (max-width: 767px) {
+    .sections-nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .sections-nav-container {
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--yellow);
+        padding: 80px 0 20px;
+        transform: translateX(0);
+    }
+
+    .sections-nav-toggler {
+        display: none;
+    }
+
+    .sections-nav {
+        flex-direction: column;
+    }
+
+    .sections-nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .sections-nav-link {
+        padding: 0.5rem 1rem;
+    }
+
+    .sections-nav-info {
+        padding: 0.1rem 1rem;
+    }
+} 

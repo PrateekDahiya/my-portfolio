@@ -1,0 +1,137 @@
+.content {
+    position: relative;
+    padding-top: 80px;
+}
+
+.container-fluid-limited {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+/* Responsive styles */
+/* Large tablets and small laptops (992px - 1200px) */
+@media (max-width: 1200px) {
+    .container-fluid-limited {
+        max-width: 960px;
+    }
+
+    .content {
+        padding-top: 70px;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .container-fluid-limited {
+        max-width: 720px;
+    }
+
+    .content {
+        padding-top: 60px;
+    }
+
+    .col-xl-9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .row {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .col {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+/* Large phones (576px - 767px) */
+@media (max-width: 767px) {
+    .container-fluid-limited {
+        max-width: 540px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .content {
+        padding-top: 50px;
+    }
+
+    .row {
+        margin-right: -8px;
+        margin-left: -8px;
+    }
+
+    .col {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+/* Small phones (280px - 575px) */
+@media (max-width: 575px) {
+    .container-fluid-limited {
+        max-width: 100%;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .content {
+        padding-top: 40px;
+    }
+
+    .row {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+
+    .col {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
+/* Fix for horizontal scroll on mobile */
+@media (max-width: 991px) {
+    .content {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
+
+/* Ensure proper spacing between sections */
+@media (max-width: 767px) {
+    .section {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .section {
+        margin-bottom: 1.5rem;
+    }
+} 

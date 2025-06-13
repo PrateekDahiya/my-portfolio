@@ -1,0 +1,36 @@
+.experience-item {
+    margin-bottom: 2rem;
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .organization,
+.experience-item .role {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin-bottom: 0.25rem;
+}
+
+.experience-item .period {
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .description-list {
+    list-style: disc;
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.experience-item .description-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--gray-dark);
+} 

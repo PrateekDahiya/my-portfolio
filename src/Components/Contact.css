@@ -1,0 +1,405 @@
+.contact-section {
+    /* padding: 4rem 0; */
+    width: 50%;
+}
+
+.contact-info {
+    margin-bottom: 3rem;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--bs-body-color);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    color: var(--bs-body-color);
+}
+
+.contact-info a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--bs-primary);
+}
+
+.contact-details-row{
+    margin-right: 4rem;
+}
+
+.contact-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--bs-body-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styles */
+form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-control::placeholder {
+    color: var(--gray);
+    opacity: 0.7;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--yellow);
+    border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Row Spacing */
+form .row {
+    margin: 0 -15px;
+}
+
+form .col-12,
+form .col-md-6 {
+    padding: 0 15px;
+}
+
+/* Update all links in the application to use dark gray color */
+a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--bs-primary);
+}
+
+/* Update navigation links */
+.navigation a {
+    color: #444;
+}
+
+.navigation a:hover {
+    color: var(--bs-primary);
+}
+
+/* Update section next links */
+.section-next {
+    color: #444;
+}
+
+.section-next:hover {
+    color: var(--bs-primary);
+}
+
+.contact-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-right: 3rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    
+
+    form {
+        padding: 1.5rem;
+    }
+
+    .form-control {
+        padding: 0.875rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+#Contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.section-body {
+    flex: 1;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+.contact-details-row {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.contact-details-row p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.contact-details-row a {
+    color: var(--gray-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.contact-details-row a:hover {
+    color: var(--primary);
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.form-control {
+    width: 80%;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.293);
+    color: var(--gray-dark);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
+}
+
+.form-control::placeholder {
+    color: var(--gray);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    width: 50%;
+    color: white;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive styles */
+/* Large tablets and small laptops (992px - 1200px) */
+@media (max-width: 1200px) {
+    .section-body {
+        padding: 1.5rem 1rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    .contact-heading {
+        font-size: 1.4rem;
+    }
+
+    .contact-details-row p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .section-body {
+        padding: 1.25rem 0.75rem;
+    }
+
+    form {
+        padding: 1.25rem;
+    }
+
+    .contact-heading {
+        font-size: 1.3rem;
+    }
+
+    .form-control {
+        padding: 0.875rem;
+    }
+
+    .btn-primary {
+        padding: 0.875rem 1.75rem;
+    }
+}
+
+/* Large phones (576px - 767px) */
+@media (max-width: 767px) {
+    .section-body {
+        padding: 1rem 0.5rem;
+    }
+
+    .contact-details-row {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-heading {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-details-row p {
+        font-size: 0.95rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    .form-control {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .mb-3 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Small phones (280px - 575px) */
+@media (max-width: 575px) {
+    .section-body {
+        padding: 0.75rem 0.25rem;
+    }
+
+    .contact-details-row {
+        margin-bottom: 1rem;
+    }
+
+    .contact-heading {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-details-row p {
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding: 0.75rem;
+    }
+
+    .form-control {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .mb-3 {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Animation adjustments for mobile */
+@media (max-width: 767px) {
+    .animation-translate {
+        transform: none !important;
+    }
+} 
