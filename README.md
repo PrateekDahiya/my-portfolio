@@ -2,6 +2,10 @@
 
 A modern, responsive portfolio website built with React.js to showcase my projects, skills, and experience.
 
+## 🌐 Live Demo
+
+Visit the live website: [Portfolio](https://prateekdahiya.netlify.app/)
+
 ## 🚀 Features
 
 - **Responsive Design**: Fully responsive layout that works on all devices (280px and above)
@@ -58,12 +62,12 @@ src/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/PrateekDahiya/my-portfolio.git
    ```
 
 2. Install dependencies:
    ```bash
-   cd portfolio
+   cd my-portfolio
    npm install
    ```
 
@@ -73,6 +77,10 @@ src/
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## 🚀 Deployment
+
+This project is deployed on Netlify. The deployment process is automated through GitHub integration.
 
 ## 🎨 Customization
 
@@ -91,9 +99,14 @@ This project is open source and available under the [MIT License](LICENSE).
 - Email: dahiyaprateek27@gmail.com
 - LinkedIn: [Prateek Dahiya](https://www.linkedin.com/in/dahiyaprtk27)
 - GitHub: [@PrateekDahiya](https://github.com/PrateekDahiya)
+- Portfolio: [prateekdahiya.netlify.app](https://prateekdahiya.netlify.app/)
 
 ## 🙏 Acknowledgments
 
 - Icons and images from various sources
 - Inspiration from modern portfolio designs
 - Community support and feedback
+
+## 📊 Repository Stats
+
+![Repository Stats](https://github-readme-stats.vercel.app/api?username=PrateekDahiya&show_icons=true&theme=radical)
