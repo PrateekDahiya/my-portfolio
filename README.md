@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React.js to showcase my projects, skills, and experience.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Responsive Design**: Fully responsive layout that works on all devices (280px and above)
+- **Modern UI**: Clean and professional design with smooth animations
+- **Interactive Components**:
+  - Hero section with animated introduction
+  - Skills section with progress bars
+  - Projects showcase with modal details
+  - Contact form with validation
+  - Smooth scrolling navigation
 
-### `npm start`
+## 🛠️ Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**:
+  - React.js
+  - CSS3 with custom animations
+  - HTML5
+  - JavaScript (ES6+)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Styling**:
+  - Custom CSS with responsive design
+  - CSS Variables for theming
+  - Flexbox and Grid layouts
 
-### `npm test`
+## 📱 Responsive Breakpoints
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Large tablets and small laptops: 992px - 1200px
+- Tablets: 768px - 991px
+- Large phones: 576px - 767px
+- Small phones: 280px - 575px
 
-### `npm run build`
+## 🏗️ Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+├── Components/
+│   ├── About.js
+│   ├── Achievements.js
+│   ├── Contact.js
+│   ├── Education.js
+│   ├── Extracurriculars.js
+│   ├── Header.js
+│   ├── Hero.js
+│   ├── MainContent.js
+│   ├── Navigation.js
+│   ├── Projects.js
+│   ├── ProjectModal.js
+│   └── Skills.js
+├── App.js
+└── index.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+   ```
 
-### `npm run eject`
+2. Install dependencies:
+   ```bash
+   cd portfolio
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 Customization
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Update personal information in respective component files
+- Modify colors in CSS variables
+- Add/remove sections as needed
+- Customize animations and transitions
 
-## Learn More
+## 📝 License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is open source and available under the [MIT License](LICENSE).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👤 Author
 
-### Code Splitting
+**Prateek Dahiya**
+- Email: dahiyaprateek27@gmail.com
+- LinkedIn: [Prateek Dahiya](https://www.linkedin.com/in/dahiyaprtk27)
+- GitHub: [@PrateekDahiya](https://github.com/PrateekDahiya)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🙏 Acknowledgments
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Icons and images from various sources
+- Inspiration from modern portfolio designs
+- Community support and feedback
