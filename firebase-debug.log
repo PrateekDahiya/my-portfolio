@@ -14,3 +14,66 @@
 [debug] [2025-06-14T09:24:11.502Z] > refreshing access token with scopes: []
 [debug] [2025-06-14T09:24:11.503Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
 [debug] [2025-06-14T09:24:11.503Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-14T09:24:12.028Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-06-14T09:24:12.028Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-14T09:24:12.035Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/canvas-fulcrum-386304:testIamPermissions [none]
+[debug] [2025-06-14T09:24:12.036Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/canvas-fulcrum-386304:testIamPermissions x-goog-quota-user=projects/canvas-fulcrum-386304
+[debug] [2025-06-14T09:24:12.036Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/canvas-fulcrum-386304:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-14T09:24:13.890Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/canvas-fulcrum-386304:testIamPermissions 200
+[debug] [2025-06-14T09:24:13.890Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/canvas-fulcrum-386304:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-14T09:24:13.891Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:13.891Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:13.891Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/canvas-fulcrum-386304 [none]
+[debug] [2025-06-14T09:24:14.815Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/canvas-fulcrum-386304 200
+[debug] [2025-06-14T09:24:14.815Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/canvas-fulcrum-386304 {"projectId":"canvas-fulcrum-386304","projectNumber":"202094663984","displayName":"Youtube","name":"projects/canvas-fulcrum-386304","resources":{"hostingSite":"canvas-fulcrum-386304"},"state":"ACTIVE","etag":"1_b75aa2a9-6b12-4837-9c70-240a722a101f"}
+[info] 
+[info] === Deploying to 'canvas-fulcrum-386304'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-06-14T09:24:14.823Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:14.823Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:14.823Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dahiya-prtk/versions [none]
+[debug] [2025-06-14T09:24:14.823Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dahiya-prtk/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-06-14T09:24:16.752Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dahiya-prtk/versions 200
+[debug] [2025-06-14T09:24:16.752Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dahiya-prtk/versions {"name":"projects/202094663984/sites/dahiya-prtk/versions/0db6247e6c46383b","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[dahiya-prtk]: beginning deploy... 
+[info] i  hosting[dahiya-prtk]: found 14 files in build 
+[debug] [2025-06-14T09:24:16.764Z] [hosting] uploading with 200 concurrency
+[debug] [2025-06-14T09:24:16.824Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:16.825Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:16.827Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2025-06-14T09:24:16.828Z] [hosting][hash queue][FINAL] {"max":55,"min":1,"avg":11.071428571428571,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":61}
+[debug] [2025-06-14T09:24:16.828Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/202094663984/sites/dahiya-prtk/versions/0db6247e6c46383b:populateFiles [none]
+[debug] [2025-06-14T09:24:16.828Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/202094663984/sites/dahiya-prtk/versions/0db6247e6c46383b:populateFiles {"files":{"/assets/img/vidvault-screenshot.jpg":"eb9ef30622e3ac44fd22de6613f6a643bd3d8ced6228f72d81f1d4542ffba2c6","/assets/img/pacman-screenshot.png":"2f1a6989ae08ff2ec524e99503a57ed8faf231d2c0f6dd44596b25301fc02f9b","/assets/img/lingoverse-screenshot.png":"60ff1a9b9b234368eb0fe22af651756d0bbf65ba113a6832a4d305155c316463","/assets/img/avatar.jpg":"6d52b1981edb70264454c0a05dce6de26888f301f173714428b3524710bae0fa","/assets/img/autogarage-screenshot.png":"73aeee7c7ae61ef7f67f764e40c71126421dc9ee5d54ca1e6c134180c1570487","/index.html":"1625b254a608b135b6288b37f35b52cd32a01b3646dbeaae1181f513d35e8766","/asset-manifest.json":"5df90fa177f9add248003e0749d6a083727195d37e39ee6dd54e40b21fda76be","/static/js/main.58757cf9.js.LICENSE.txt":"ebb955790131b63156f7f1d15240d328171a58be63d822f12db953b3d6e41eec","/static/css/main.16a760a8.css":"0a7834f4e2cabd4c4fc326e09503af5f98e85676f1b4c083d19a8d6a4602714f","/static/css/main.16a760a8.css.map":"e0e921910ccb866c7525b4276601ff1321edf25a4af27ba9f4efc59b275ea6e2","/assets/img/portfolio-screenshot.png":"6c0a6bd0296b9ab589a19b6c91bf29abec581a1f6505d12bb18aefd8ae3a0f2d","/assets/documents/Prateek_Dahiya_Resume.pdf":"26a62b80137ee8aa9509b08b04205282fb4a00f00f433b0853093e2699333afd","/static/js/main.58757cf9.js":"9190bf9fa02f313950d829c8d8fd633be0723caa006e2b154bd4ccd56a4abbed","/static/js/main.58757cf9.js.map":"a47daf217a25b01722b2898b8a626c724bd0affe12c2f9f6a034d75ff4a8967c"}}
+[debug] [2025-06-14T09:24:17.475Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/202094663984/sites/dahiya-prtk/versions/0db6247e6c46383b:populateFiles 200
+[debug] [2025-06-14T09:24:17.476Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/202094663984/sites/dahiya-prtk/versions/0db6247e6c46383b:populateFiles {"uploadRequiredHashes":["5df90fa177f9add248003e0749d6a083727195d37e39ee6dd54e40b21fda76be","1625b254a608b135b6288b37f35b52cd32a01b3646dbeaae1181f513d35e8766","6c0a6bd0296b9ab589a19b6c91bf29abec581a1f6505d12bb18aefd8ae3a0f2d","26a62b80137ee8aa9509b08b04205282fb4a00f00f433b0853093e2699333afd","9190bf9fa02f313950d829c8d8fd633be0723caa006e2b154bd4ccd56a4abbed","a47daf217a25b01722b2898b8a626c724bd0affe12c2f9f6a034d75ff4a8967c"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files"}
+[debug] [2025-06-14T09:24:17.477Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.478Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.478Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.478Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.478Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.478Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.478Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.478Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.479Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.479Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.479Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.480Z] Checked if tokens are valid: true, expires at: 1749896651028
+[debug] [2025-06-14T09:24:17.480Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/5df90fa177f9add248003e0749d6a083727195d37e39ee6dd54e40b21fda76be [none]
+[debug] [2025-06-14T09:24:17.480Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/5df90fa177f9add248003e0749d6a083727195d37e39ee6dd54e40b21fda76be [stream]
+[debug] [2025-06-14T09:24:17.482Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/1625b254a608b135b6288b37f35b52cd32a01b3646dbeaae1181f513d35e8766 [none]
+[debug] [2025-06-14T09:24:17.482Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/1625b254a608b135b6288b37f35b52cd32a01b3646dbeaae1181f513d35e8766 [stream]
+[debug] [2025-06-14T09:24:17.484Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/6c0a6bd0296b9ab589a19b6c91bf29abec581a1f6505d12bb18aefd8ae3a0f2d [none]
+[debug] [2025-06-14T09:24:17.484Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/6c0a6bd0296b9ab589a19b6c91bf29abec581a1f6505d12bb18aefd8ae3a0f2d [stream]
+[debug] [2025-06-14T09:24:17.487Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/26a62b80137ee8aa9509b08b04205282fb4a00f00f433b0853093e2699333afd [none]
+[debug] [2025-06-14T09:24:17.487Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/26a62b80137ee8aa9509b08b04205282fb4a00f00f433b0853093e2699333afd [stream]
+[debug] [2025-06-14T09:24:17.489Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/9190bf9fa02f313950d829c8d8fd633be0723caa006e2b154bd4ccd56a4abbed [none]
+[debug] [2025-06-14T09:24:17.489Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/9190bf9fa02f313950d829c8d8fd633be0723caa006e2b154bd4ccd56a4abbed [stream]
+[debug] [2025-06-14T09:24:17.491Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/a47daf217a25b01722b2898b8a626c724bd0affe12c2f9f6a034d75ff4a8967c [none]
+[debug] [2025-06-14T09:24:17.491Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/a47daf217a25b01722b2898b8a626c724bd0affe12c2f9f6a034d75ff4a8967c [stream]
+[debug] [2025-06-14T09:24:17.493Z] [hosting][populate queue][FINAL] {"max":656,"min":656,"avg":656,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":669}
+[debug] [2025-06-14T09:24:17.493Z] [hosting] uploads queued: 6
+[debug] [2025-06-14T09:24:19.799Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/5df90fa177f9add248003e0749d6a083727195d37e39ee6dd54e40b21fda76be 200
+[debug] [2025-06-14T09:24:19.800Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/5df90fa177f9add248003e0749d6a083727195d37e39ee6dd54e40b21fda76be [stream]
+[debug] [2025-06-14T09:24:20.144Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/1625b254a608b135b6288b37f35b52cd32a01b3646dbeaae1181f513d35e8766 200
+[debug] [2025-06-14T09:24:20.144Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dahiya-prtk/versions/0db6247e6c46383b/files/1625b254a608b135b6288b37f35b52cd32a01b3646dbeaae1181f513d35e8766 [stream]
