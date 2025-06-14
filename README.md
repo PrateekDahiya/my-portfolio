@@ -89,10 +89,6 @@ This project is deployed on Netlify. The deployment process is automated through
 - Add/remove sections as needed
 - Customize animations and transitions
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 👤 Author
 
 **Prateek Dahiya**
