@@ -102,7 +102,3 @@ This project is deployed on Netlify. The deployment process is automated through
 - Icons and images from various sources
 - Inspiration from modern portfolio designs
 - Community support and feedback
-
-## 📊 Repository Stats
-
-![Repository Stats](https://github-readme-stats.vercel.app/api?username=PrateekDahiya&show_icons=true&theme=radical)
