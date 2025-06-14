@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React.js to showcase my projec
 
 ## 🌐 Live Demo
 
-Visit the live website: [Portfolio](https://prateekdahiya.netlify.app/)
+Visit the live website: [Portfolio](https://dahiya-prtk.web.app/)
 
 ## 🚀 Features
 
