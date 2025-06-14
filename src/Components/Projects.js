@@ -36,6 +36,28 @@ const Projects = () => {
             ]
         },
         {
+            "title": "Portfolio Website",
+            "technologies": "React, CSS , JavaScript, Firebase",
+            "date": "June 2025",
+            "image": "portfolio-screenshot.png",
+            "description": [
+                "Designed and developed a personal portfolio website to showcase projects, skills, and achievements.",
+                "Built with a responsive layout ensuring smooth performance across devices and browsers.",
+                "Integrated Firebase for hosting and seamless deployment pipeline.",
+                "Focused on clean UI/UX to reflect personal brand and enhance user navigation."
+            ],
+            "links": [
+                {
+                    "text": "Live Portfolio",
+                    "url": "https://dahiya-prtk.web.app/"
+                },
+                {
+                    "text": "GitHub Repository",
+                    "url": "https://github.com/PrateekDahiya/my-portfolio"
+                }
+            ]
+        },
+        {
             title: "Pac-Man",
             technologies: "GameMaker",
             date: "June 2022 – July 2022",
