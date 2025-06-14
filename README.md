@@ -99,7 +99,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - Email: dahiyaprateek27@gmail.com
 - LinkedIn: [Prateek Dahiya](https://www.linkedin.com/in/dahiyaprtk27)
 - GitHub: [@PrateekDahiya](https://github.com/PrateekDahiya)
-- Portfolio: [prateekdahiya.netlify.app](https://prateekdahiya.netlify.app/)
+- Portfolio: [dahiya-prtk.web.app](https://dahiya-prtk.web.app)
 
 ## 🙏 Acknowledgments
 
