@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React.js to showcase my projec
 
 ## 🌐 Live Demo
 
-Visit the live website: [Portfolio](https://prateekdahiya.netlify.app/)
+Visit the live website: [Portfolio](https://dahiya-prtk.web.app/)
 
 ## 🚀 Features
 
@@ -89,24 +89,16 @@ This project is deployed on Netlify. The deployment process is automated through
 - Add/remove sections as needed
 - Customize animations and transitions
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 👤 Author
 
 **Prateek Dahiya**
 - Email: dahiyaprateek27@gmail.com
 - LinkedIn: [Prateek Dahiya](https://www.linkedin.com/in/dahiyaprtk27)
 - GitHub: [@PrateekDahiya](https://github.com/PrateekDahiya)
-- Portfolio: [prateekdahiya.netlify.app](https://prateekdahiya.netlify.app/)
+- Portfolio: [dahiya-prtk.web.app](https://dahiya-prtk.web.app)
 
 ## 🙏 Acknowledgments
 
 - Icons and images from various sources
 - Inspiration from modern portfolio designs
 - Community support and feedback
-
-## 📊 Repository Stats
-
-![Repository Stats](https://github-readme-stats.vercel.app/api?username=PrateekDahiya&show_icons=true&theme=radical)
