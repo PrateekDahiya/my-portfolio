@@ -27,7 +27,6 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-bottom: 1rem;
     transform: translateX(-100px);
     opacity: 0;
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
@@ -41,6 +40,7 @@
 .display-1 {
     font-size: 4rem;
     font-weight: 700;
+    margin-top: 0;
     margin-bottom: 1rem;
     transform: translateX(-100px);
     opacity: 0;
@@ -148,20 +148,77 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.resume-download-btn.animate-in
-{
+.resume-download-btn.animate-in {
     transform: translateX(0);
     opacity: 1;
+}
+
+/* Social Media Links Styles */
+.social-links {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.social-links.animate-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--yellow);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+}
+
+.social-link:hover {
+    background-color: transparent;
+    color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
 }
 
 @media (max-width: 768px) {
     .display-1 {
         font-size: 3rem;
     }
-    
+
     .jumbotron-img {
         width: 120px;
         height: 120px;
+    }
+
+    .social-links {
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-link svg {
+        width: 18px;
+        height: 18px;
     }
 }
 
@@ -246,6 +303,26 @@
         transform: translateY(20px);
     }
 
+    .social-links {
+        gap: 1rem;
+        margin: 1rem 0;
+        transform: translateY(20px);
+    }
+
+    .social-links.animate-in {
+        transform: translateY(0);
+    }
+
+    .social-link {
+        width: 42px;
+        height: 42px;
+    }
+
+    .social-link svg {
+        width: 18px;
+        height: 18px;
+    }
+
     .section-footer {
         position: relative;
         bottom: auto;
@@ -300,6 +377,26 @@
         margin: 0 auto 1rem;
     }
 
+    .social-links {
+        gap: 0.8rem;
+        margin: 0.8rem 0;
+        transform: translateY(20px);
+    }
+
+    .social-links.animate-in {
+        transform: translateY(0);
+    }
+
+    .social-link {
+        width: 38px;
+        height: 38px;
+    }
+
+    .social-link svg {
+        width: 16px;
+        height: 16px;
+    }
+
     .section-footer {
         margin-top: 1.5rem;
         width: 100%;
@@ -322,6 +419,7 @@
     .jumbotron-img,
     .display-1,
     .lead,
+    .social-links,
     .resume-download-btn,
     .section-footer {
         transform: translateY(20px);
@@ -330,8 +428,9 @@
     .jumbotron-img.animate-in,
     .display-1.animate-in,
     .lead.animate-in,
+    .social-links.animate-in,
     .resume-download-btn.animate-in,
     .section-footer.animate-in {
         transform: translateY(0);
     }
-} 
+}
