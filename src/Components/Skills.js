@@ -99,8 +99,8 @@ const Skills = () => {
             <div
                 className={`section-footer animation-translate animation-item-${animationItemCounter++}`}
             >
-                <a className="section-next goto-section" href="#Projects">
-                    <span className="section-next-counter">05/07</span>
+                <a className="section-next goto-section" href="#Contact">
+                    <span className="section-next-counter">06/06</span>
                     <span className="section-next-label">Next chapter</span>
                     <span className="section-next-icon"></span>
                 </a>

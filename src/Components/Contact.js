@@ -88,11 +88,19 @@ const Contact = () => {
                         <p
                             className={`animation-translate animation-item-${animationItemCounter++}`}
                         >
-                            <a href="mailto:dahiyaprateek27@gmail.com">
+                            <a
+                                className="contact-links"
+                                href="mailto:dahiyaprateek27@gmail.com"
+                            >
                                 dahiyaprateek27@gmail.com
                             </a>
                             <br />
-                            <a href="tel:+918307434738">+91 8307434738</a>
+                            <a
+                                className="contact-links"
+                                href="tel:+918307434738"
+                            >
+                                +91 8307434738
+                            </a>
                         </p>
                     </div>
                     <div
@@ -107,6 +115,7 @@ const Contact = () => {
                             className={`animation-translate animation-item-${animationItemCounter++}`}
                         >
                             <a
+                                className="contact-links"
                                 href="https://www.linkedin.com/in/dahiyaprtk27"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -115,6 +124,7 @@ const Contact = () => {
                             </a>
                             <br />
                             <a
+                                className="contact-links"
                                 href="https://github.com/PrateekDahiya"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -123,6 +133,7 @@ const Contact = () => {
                             </a>
                             <br />
                             <a
+                                className="contact-links"
                                 href="https://www.instagram.com/dahiya_prtk27/"
                                 target="_blank"
                                 rel="noopener noreferrer"

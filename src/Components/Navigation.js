@@ -32,24 +32,25 @@ function Navigation() {
           </a>
         </li>
         <li className="sections-nav-item">
-          <a href="#Skills" className="nav-link sections-nav-link  ">
-            <span className="sections-nav-counter">04</span>
-            Skills
-          </a>
-        </li>
-
-        <li className="sections-nav-item">
           <a href="#Projects" className="nav-link sections-nav-link  ">
-            <span className="sections-nav-counter">05</span>
+            <span className="sections-nav-counter">04</span>
             Projects
           </a>
         </li>
         <li className="sections-nav-item">
+          <a href="#Skills" className="nav-link sections-nav-link  ">
+            <span className="sections-nav-counter">05</span>
+            Skills
+          </a>
+        </li>
+
+        
+        {/* <li className="sections-nav-item">
           <a href="#Extracurricular" className="nav-link sections-nav-link  ">
             <span className="sections-nav-counter">06</span>
             Extracurricular Engagements
           </a>
-        </li>
+        </li> */}
         {/* <li className="sections-nav-item">
           <a href="#Achievements" className="nav-link sections-nav-link  ">
             <span className="sections-nav-counter">07</span>
@@ -58,7 +59,7 @@ function Navigation() {
         </li> */}
         <li className="sections-nav-item">
           <a href="#Contact" className="nav-link sections-nav-link  ">
-            <span className="sections-nav-counter">07</span>
+            <span className="sections-nav-counter">06</span>
             Contact
           </a>
         </li>

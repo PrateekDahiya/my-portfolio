@@ -76,7 +76,7 @@ const Hero = () => {
             </div>
             <div className="section-footer hero-animate">
                 <a className="section-next goto-section" href="#About-me">
-                    <span className="section-next-counter">02/07</span>
+                    <span className="section-next-counter">02/06</span>
                     <span className="section-next-label">Next chapter</span>
                     <span className="section-next-icon"></span>
                 </a>

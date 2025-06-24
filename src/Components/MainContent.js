@@ -9,6 +9,7 @@ import Projects from './Projects';
 import Extracurriculars from './Extracurriculars';
 import Achievements from './Achievements';
 import Contact from './Contact';
+import Projectsnew from './Projectsnew';
 // import Services from './Services'; // Commented out as it might not fit a typical resume structure
 import './MainContent.css';
 
@@ -18,11 +19,12 @@ const MainContent = () => {
             <Hero />
             <About />
             <Education />
+            {/* <Projects /> */}
+            <Projectsnew/>
             <Skills />
             {/* <Facts /> */}
             {/* <Experience /> */}
-            <Projects />
-            <Extracurriculars />
+            {/* <Extracurriculars /> */}
             {/* <Achievements /> */}
             <Contact />
     </main>

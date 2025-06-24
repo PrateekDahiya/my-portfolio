@@ -32,7 +32,7 @@ const About = () => {
             </div>
             <div className="section-footer animation-translate animation-item-6">
                 <a className="section-next goto-section" href="#Education">
-                    <span className="section-next-counter">03/07</span>
+                    <span className="section-next-counter">03/06</span>
                     <span className="section-next-label">Next chapter</span>
                     <span className="section-next-icon"></span>
                 </a>

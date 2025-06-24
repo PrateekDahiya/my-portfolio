@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* 80% opacity black overlay */
+    background-color: var(--yellow);
     display: flex;
     justify-content: center;
     align-items: center; /* Keep centered to avoid going off screen entirely */
@@ -28,8 +28,8 @@
     max-height: 95vh; /* Allow more content space vertically */
     overflow-y: auto; /* Keep content scrollable */
     box-sizing: border-box;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .project-modal-content::-webkit-scrollbar {
@@ -50,14 +50,14 @@
     font-size: 3.5rem; /* Extremely large font size for visibility */
     font-weight: bold;
     cursor: pointer;
-    color: #FFFFFF; /* White color for the X */
+    color: #ffffff; /* White color for the X */
     z-index: 10000; /* Extremely high z-index to guarantee visibility */
     transition: all 0.3s ease;
     line-height: 1;
 }
 
 .project-modal-close:hover {
-    background-color: #CC0000;
+    background-color: #cc0000;
     border-color: #333333; /* Darker border on hover */
 }
 
@@ -121,20 +121,21 @@
     display: inline-block;
     margin-right: 1rem;
     color: var(--primary);
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 600;
     margin-bottom: 1rem;
+    transition: color 0.3s ease-in-out;
 }
 
 .project-modal-links .project-link:hover {
-    text-decoration: underline;
+    color: var(--cyan);
 }
 
 .navigation-sidebar {
     /* Styles for the navigation sidebar within the modal */
     background-color: transparent; /* No background as it's part of the main modal content */
     padding-left: 30px; /* Add some left padding to separate from content */
-    border-left: 1px solid rgba(0,0,0,0.1); /* Separator line */
+    border-left: 1px solid rgba(0, 0, 0, 0.1); /* Separator line */
 }
 
 .navigation-sidebar .sections-nav {
@@ -162,7 +163,9 @@
     .project-modal-content {
         padding: 30px 15px; /* Adjusted for smaller screens */
         width: 95%;
-        max-height: calc(100vh - 20px); /* Adjusted for smaller screens to account for less padding */
+        max-height: calc(
+            100vh - 20px
+        ); /* Adjusted for smaller screens to account for less padding */
     }
 
     .project-modal-close {
@@ -393,4 +396,4 @@
 
 .modal-content {
     animation: modalFadeIn 0.3s ease-out;
-} 
+}

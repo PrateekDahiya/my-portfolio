@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./Projects.css";
+import "./Projectsnew.css";
 import ProjectModal from "./ProjectModal";
 
-const Projects = () => {
+const Projectsnew = () => {
     const projectDetails = [
         {
             title: "VidVault",
@@ -140,31 +140,67 @@ const Projects = () => {
     }, [showModal]);
 
     return (
-        <section id="Projects" className="section animation">
-            <div className="section-body">
-                <h2 className="section-title animation-translate animation-item-1">
-                    Projects
-                </h2>
-                <div className="row project-box animation-translate animation-item-2">
-                    {projectDetails.map((project, index) => (
-                        <div
-                            key={index}
-                            className="col-12 col-md-4 project-grid-item"
-                            onClick={() => openModal(project)}
-                        >
+        <section id="Projects" className="projects-section section animation">
+            <h2 className="section-title animation-translate animation-item-1">
+                Projects
+            </h2>
+            <div className=" projects-grid animation-translate animation-item-2">
+                {projectDetails.map((project, index) => (
+                    <div key={index} className="project-card">
+                        <div className="project-image-container">
                             <img
                                 src={`/assets/img/${project.image}`}
                                 alt={project.title}
-                                className="img-fluid project-image"
+                                className="project-image"
                             />
-                            <h3 className="project-title">{project.title}</h3>
-                            <p className="project-technologies">
-                                {project.technologies}
-                            </p>
                         </div>
-                    ))}
-                </div>
+                        <div className="project-content">
+                            <h3 className="project-title">{project.title}</h3>
+                            <div className="project-badges">
+                                {project.technologies &&
+                                    project.technologies
+                                        .split(",")
+                                        .map((tech, i) => (
+                                            <span
+                                                key={i}
+                                                className="project-badge"
+                                            >
+                                                {tech.trim()}
+                                            </span>
+                                        ))}
+                            </div>
+                            <button
+                                className="project-fab"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    window.open(project.links[0].url, "_blank");
+                                }}
+                                title="Open project"
+                            >
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            className="project-overlay"
+                            onClick={() => openModal(project)}
+                        ></div>
+                    </div>
+                ))}
             </div>
+
             <div className="section-footer animation-translate animation-item-3">
                 <a className="section-next goto-section" href="#Skills">
                     <span className="section-next-counter">05/06</span>
@@ -180,4 +216,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default Projectsnew;
