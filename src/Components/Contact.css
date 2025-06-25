@@ -133,7 +133,7 @@ form .col-md-6 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-a {
+/* a {
     color: #444;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -141,7 +141,7 @@ a {
 
 a:hover {
     color: var(--gray);
-}
+} */
 
 /* Update navigation links */
 .navigation a {

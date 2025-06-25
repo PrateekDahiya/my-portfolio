@@ -66,34 +66,31 @@ const Skills = () => {
                     Skills
                 </h2>
                 <div className="row animation-translate animation-item-2">
-                    <div className="col-12 skill-category-col">
-                        <ul className="skill-list">
-                            {skills.map((skill, index) => {
-                                const skillAnimationItem =
-                                    animationItemCounter++;
-                                return (
-                                    <a
-                                        key={index}
-                                        href={skill.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="skill-link"
+                    <ul className="skill-list">
+                        {skills.map((skill, index) => {
+                            const skillAnimationItem = animationItemCounter++;
+                            return (
+                                <a
+                                    key={index}
+                                    href={skill.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="skill-link"
+                                >
+                                    <li
+                                        className={`animation-translate animation-item-${skillAnimationItem}`}
                                     >
-                                        <li
-                                            className={`animation-translate animation-item-${skillAnimationItem}`}
-                                        >
-                                            <strong className="skill-name">
-                                                {skill.name}
-                                            </strong>
-                                            <div className="skill-description">
-                                                {skill.description}
-                                            </div>
-                                        </li>
-                                    </a>
-                                );
-                            })}
-                        </ul>
-                    </div>
+                                        <strong className="skill-name">
+                                            {skill.name}
+                                        </strong>
+                                        <div className="skill-description">
+                                            {skill.description}
+                                        </div>
+                                    </li>
+                                </a>
+                            );
+                        })}
+                    </ul>
                 </div>
             </div>
             <div
