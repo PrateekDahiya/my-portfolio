@@ -1,24 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Hero.css";
+import SplitText from "./SplitText";
+// import DotGrid from "./DotGrid";
 
 const Hero = () => {
+    const [themeColors, setThemeColors] = useState({ primary: "#5227FF", yellow: "#ffdc67c9" });
+
     useEffect(() => {
         // Add animate-in class to elements after a small delay
         const elements = document.querySelectorAll(".hero-animate");
         elements.forEach((element) => {
             element.classList.add("animate-in");
         });
+        // Get theme colors from CSS variables
+        const root = document.documentElement;
+        const computed = getComputedStyle(root);
+        setThemeColors({
+            primary: computed.getPropertyValue('--primary').trim() || "#5227FF",
+            yellow: computed.getPropertyValue('--yellow').trim() || "#ffdc67c9"
+        });
     }, []);
 
     return (
-        <section id="Top" className="section section-sub-header">
-            <div className="section-body">
+        <section id="Top" className="section section-sub-header" style={{ position: 'relative', overflow: 'hidden' }}>
+            {/* DotGrid Background removed */}
+            {/* Main Hero Content */}
+            <div className="section-body" style={{ position: 'relative', zIndex: 1 }}>
                 <div className="jumbotron jumbotron-fluid pt-6 pt-lg-8 pb-0 mb-0">
                     <img
                         src="/assets/img/avatar.jpg"
                         className="jumbotron-img hero-animate"
                         alt="Avatar"
                     />
+                    {/* Name with SplitText */}
                     <h1 className="display-1 hero-animate">
                         Prateek
                         <br />

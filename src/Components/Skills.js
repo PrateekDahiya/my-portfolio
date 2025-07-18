@@ -8,16 +8,25 @@ const Skills = () => {
             name: "HTML/CSS",
             url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
             description: "Markup & styling",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         },
         {
             name: "JavaScript",
             url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
             description: "Client-side logic",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         },
         {
             name: "React JS",
             url: "https://react.dev/",
             description: "UI framework",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        },
+        {
+            name: "Next.js",
+            url: "https://nextjs.org/",
+            description: "React framework",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
         },
 
         // Backend
@@ -25,11 +34,13 @@ const Skills = () => {
             name: "Node JS",
             url: "https://nodejs.org/",
             description: "JavaScript runtime",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         },
         {
             name: "Express JS",
             url: "https://expressjs.com/",
             description: "Web framework",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
         },
 
         // Database
@@ -37,11 +48,13 @@ const Skills = () => {
             name: "MongoDB",
             url: "https://www.mongodb.com/",
             description: "NoSQL database",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
         },
         {
             name: "MySQL",
             url: "https://www.mysql.com/",
             description: "Relational DB",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
         },
 
         // Tools
@@ -49,11 +62,7 @@ const Skills = () => {
             name: "Git",
             url: "https://git-scm.com/",
             description: "Version control",
-        },
-        {
-            name: "VS Code",
-            url: "https://code.visualstudio.com/",
-            description: "Code editor",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
         },
     ];
 
@@ -80,11 +89,18 @@ const Skills = () => {
                                     <li
                                         className={`animation-translate animation-item-${skillAnimationItem}`}
                                     >
-                                        <strong className="skill-name">
-                                            {skill.name}
-                                        </strong>
-                                        <div className="skill-description">
-                                            {skill.description}
+                                        <img
+                                            src={skill.logo}
+                                            alt={skill.name}
+                                            className="skill-logo"
+                                        />
+                                        <div className="skill-text">
+                                            <strong className="skill-name">
+                                                {skill.name}
+                                            </strong>
+                                            <div className="skill-description">
+                                                {skill.description}
+                                            </div>
                                         </div>
                                     </li>
                                 </a>

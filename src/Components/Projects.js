@@ -106,6 +106,41 @@ const Projects = () => {
                 },
             ],
         },
+        {
+    title: "Lung and Colon Cancer Classification Web App",
+    technologies: "Flask, React, CNN, TensorFlow, Python, JavaScript",
+    date: "June 2025",
+    image: "lung-cancer-classification.png", // Ensure this image exists in your assets
+    description: [
+        "Built a full-stack web app to classify histopathological images into lung_aca, lung_scc, and lung_n using a CNN model.",
+        "Trained the model on real-world cancer image data using TensorFlow and served it with a Flask API.",
+        "Created a responsive React frontend to upload images and visualize classification results.",
+        "Implemented model training with data preprocessing, CNN architecture, and evaluation via accuracy and confusion matrix.",
+    ],
+    links: [
+        {
+            text: "Model Dataset",
+            url: "https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images",
+        },
+        {
+            text: "Model (.h5) Download",
+            url: "https://drive.google.com/file/d/1nfdXUg0Czbm-JBRPM9AQzRPFQEztvgxR/view?usp=sharing",
+        },
+        {
+            text: "GitHub: Frontend",
+            url: "https://github.com/PrateekDahiya/Lung-Cancer-Detection-Frontend",
+        },
+        {
+            text: "GitHub: Backend",
+            url: "https://github.com/PrateekDahiya/Lung-Cancer-Detection-Backend",
+        },
+        {
+            text: "Training Notebook (training.ipynb)",
+            url: "https://github.com/PrateekDahiya/Lung-Cancer-Detection-Backend/blob/main/training.ipynb",
+        },
+    ],
+}
+
     ];
 
     const [showModal, setShowModal] = useState(false);

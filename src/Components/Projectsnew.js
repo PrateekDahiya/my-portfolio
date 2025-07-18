@@ -5,6 +5,32 @@ import ProjectModal from "./ProjectModal";
 const Projectsnew = () => {
     const projectDetails = [
         {
+            title: "EduTracker",
+            technologies: "Next.js, Tailwind CSS, App Router, Vercel, Google Auth",
+            date: "2024",
+            image: "edutracker-screenshot.png",
+            description: [
+                "Modern, fully responsive student productivity and attendance tracker.",
+                "Track classes, mark attendance, and view weekly or daily schedules.",
+                "Organize tasks by course, set priorities, and mark completion.",
+                "Dashboard with stats, upcoming classes/tasks, and activity timeline.",
+                "Secure authentication (credentials & Google).",
+                "Built with Next.js App Router, Tailwind CSS, and best practices for performance and accessibility.",
+                "Fully responsive: works on all devices, mobile-first design.",
+                "Theme support: switch between light/dark, all UI uses CSS variables for theming."
+            ],
+            links: [
+                {
+                    text: "Live",
+                    url: "https://edutracker-pi.vercel.app/"
+                },
+                {
+                    text: "GitHub",
+                    url: "https://github.com/PrateekDahiya/edutracker"
+                }
+            ]
+        },
+        {
             title: "VidVault",
             technologies: "Express.js, React, MySQL, YouTube APIs",
             date: "June 2024 – July 2024",
@@ -72,6 +98,62 @@ const Projectsnew = () => {
                 {
                     text: "GitHub Repository",
                     url: "https://github.com/PrateekDahiya/my-portfolio",
+                },
+            ],
+        },
+        {
+            title: "Realtime AI Chat App",
+            technologies: "Flask, Socket.IO, JavaScript, Groq API, HTML/CSS",
+            date: "June 2025",
+            image: "realtime-chat-screenshot.png",
+            description: [
+                "Built a real-time AI chatbot using Flask and WebSockets with dynamic conversation context handling.",
+                "Integrated Groq API (LLaMA 3) to simulate a custom AI persona with memory and duplicate question filtering.",
+                "Enabled voice input and text-to-speech responses using SpeechRecognition and pyttsx3.",
+                "Deployed on Render with persistent JSON-based chat history and a clean, responsive UI.",
+            ],
+            links: [
+                {
+                    text: "Live",
+                    url: "https://realtimeaichat-1wxn.onrender.com",
+                },
+                {
+                    text: "GitHub Repository",
+                    url: "https://github.com/PrateekDahiya/RealTimeAIchat",
+                },
+            ],
+        },
+        {
+            title: "Lung and Colon Cancer Classification Web App",
+            technologies: "Flask, React, CNN, TensorFlow, Python, JavaScript",
+            date: "June 2025",
+            image: "lung-cancer-classification.png", // Ensure this image exists in your assets
+            description: [
+                "Built a full-stack web app to classify histopathological images into lung_aca, lung_scc, and lung_n using a CNN model.",
+                "Trained the model on real-world cancer image data using TensorFlow and served it with a Flask API.",
+                "Created a responsive React frontend to upload images and visualize classification results.",
+                "Implemented model training with data preprocessing, CNN architecture, and evaluation via accuracy and confusion matrix.",
+            ],
+            links: [
+                {
+                    text: "Model Dataset",
+                    url: "https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images",
+                },
+                {
+                    text: "Model (.h5) Download",
+                    url: "https://drive.google.com/file/d/1nfdXUg0Czbm-JBRPM9AQzRPFQEztvgxR/view?usp=sharing",
+                },
+                {
+                    text: "GitHub: Frontend",
+                    url: "https://github.com/PrateekDahiya/Lung-Cancer-Detection-Frontend",
+                },
+                {
+                    text: "GitHub: Backend",
+                    url: "https://github.com/PrateekDahiya/Lung-Cancer-Detection-Backend",
+                },
+                {
+                    text: "Training Notebook (training.ipynb)",
+                    url: "https://github.com/PrateekDahiya/Lung-Cancer-Detection-Backend/blob/main/training.ipynb",
                 },
             ],
         },

@@ -1,22 +1,27 @@
 :root {
-    --blue: #494eff;
-    --indigo: #6610f2;
-    --purple: #710bb8;
-    --pink: #e84d85;
-    --red: #bb0e19;
-    --orange: #ff8b2b;
-    --yellow: #ffdc67c9;
-    --darker: rgba(0, 0, 0, 0.04);
-    --lighter: rgba(255, 255, 255, 0.093);
-    --green: #15764b;
-    --teal: #22c9a6;
-    --cyan: #0a9cb4;
-    --white: #fff;
-    --gray: rgba(0, 0, 0, 0.6);
-    --gray-dark: rgba(0, 0, 0, 0.8);
-    --primary: #000;
-    --success: #15764b;
-    --danger: #bb0e19;
+    --linen: #fcf8ef;
+    --black: #010101;
+    --amber: #f5c000;
+    --tobacco: #6c5e41;
+    --gull-gray: #95a1b0;
+    --red-damask: #d56b36;
+    --jacksons-purple: #1a3685;
+    --confetti: #e6e75e;
+    --blue: #1994be;
+
+    --primary: #1a3685; /* Jacksons Purple: main accent */
+    --secondary: #f5c000; /* Amber: secondary/accent */
+    --background: #fcf8ef; /* Linen: light background */
+    --background-alt: #f5c000; /* Amber as main background */
+    --text-color: #010101; /* Black: main text */
+    --text-muted: #6c5e41; /* Tobacco Brown: muted text */
+    --card-bg: #fff; /* White for cards */
+    --border: #95a1b0; /* Gull Gray for borders */
+    --danger: #d56b36;
+    --success: #1994be;
+    --lighter: #fcf8ef;
+    --darker: #6c5e41;
+    --yellow: #f5c000;
 }
 
 body {
@@ -27,9 +32,9 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #000;
+    color: var(--text-color);
     text-align: left;
-    background-color: #ffdb67;
+    background-color: var(--background-alt);
 }
 
 .App {

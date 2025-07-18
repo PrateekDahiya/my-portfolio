@@ -29,13 +29,132 @@
     border-radius: 50%;
     transform: translateX(-100px);
     opacity: 0;
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    transition: transform 0.8s cubic-bezier(.4,2,.6,1), opacity 0.8s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-
 .jumbotron-img.animate-in {
     transform: translateX(0);
     opacity: 1;
 }
+.jumbotron-img:hover, .jumbotron-img:focus {
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    outline: none;
+    cursor: pointer;
+}
+.jumbotron-img:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+/* Ripple effect utility */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background: rgba(0,0,0,0.12);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Avatar floating effect */
+.jumbotron-img:hover, .jumbotron-img:focus {
+  animation: floatAvatar 1.6s infinite alternate cubic-bezier(.4,2,.6,1);
+  box-shadow: 0 8px 24px var(--amber);
+}
+@keyframes floatAvatar {
+  0% { transform: scale(1.04) rotate(-2deg) translateY(0); }
+  100% { transform: scale(1.06) rotate(-2deg) translateY(-8px); }
+}
+
+/* Name/title flicker effect */
+.display-1 {
+  position: relative;
+  transition: text-shadow 0.3s cubic-bezier(.4,2,.6,1), color 0.3s cubic-bezier(.4,2,.6,1);
+}
+.display-1:hover, .display-1:focus {
+  text-shadow: 0 2px 16px var(--amber), 0 0 2px var(--primary);
+  color: var(--primary);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Lead text lively effect */
+.lead {
+  transition: color 0.3s cubic-bezier(.4,2,.6,1), transform 0.3s cubic-bezier(.4,2,.6,1);
+}
+.lead:hover, .lead:focus {
+  color: var(--primary);
+  transform: scale(1.03) skewX(-2deg);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Social link glow and focus ring */
+.social-link:focus-visible {
+  box-shadow: 0 0 0 4px var(--amber), 0 8px 24px var(--amber);
+  outline: none;
+}
+.social-link:active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  background: rgba(245,192,0,0.18); /* Amber with opacity */
+  border-radius: 50%;
+  transform: translate(-50%,-50%) scale(1.2);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Resume button ripple and focus ring */
+.resume-download-btn:focus-visible {
+  box-shadow: 0 0 0 4px var(--amber), 0 8px 24px var(--amber);
+  outline: none;
+}
+
+/* Section next arrow wiggle */
+.section-next-icon {
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+}
+.section-next:hover .section-next-icon, .section-next:focus .section-next-icon {
+  transform: rotate(-45deg) translateX(4px) scale(1.1);
+  animation: wiggleArrow 0.5s infinite alternate cubic-bezier(.4,2,.6,1);
+  box-shadow: 0 0 8px var(--amber);
+}
+@keyframes wiggleArrow {
+  0% { transform: rotate(-45deg) translateX(4px) scale(1.1); }
+  100% { transform: rotate(-45deg) translateX(8px) scale(1.15); }
+}
+
+/* Staggered entrance for .hero-animate */
+.hero-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);
+}
+.hero-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero-animate:nth-child(1) { transition-delay: 0.1s; }
+.hero-animate:nth-child(2) { transition-delay: 0.2s; }
+.hero-animate:nth-child(3) { transition-delay: 0.3s; }
+.hero-animate:nth-child(4) { transition-delay: 0.4s; }
+.hero-animate:nth-child(5) { transition-delay: 0.5s; }
+.hero-animate:nth-child(6) { transition-delay: 0.6s; }
+.hero-animate:nth-child(7) { transition-delay: 0.7s; }
+.hero-animate:nth-child(8) { transition-delay: 0.8s; }
+.hero-animate:nth-child(9) { transition-delay: 0.9s; }
 
 .display-1 {
     font-size: 4rem;
@@ -104,6 +223,17 @@
     align-items: center;
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s cubic-bezier(.4,2,.6,1);
+}
+.section-next:hover, .section-next:focus {
+    color: var(--amber);
+    transform: translateX(8px) scale(1.04);
+    outline: none;
+}
+.section-next:active {
+    transform: scale(0.98);
+    color: var(--primary);
 }
 
 .section-next-counter {
@@ -119,8 +249,8 @@
 .section-next-icon {
     width: 16px;
     height: 16px;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
+    border-right: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
     transform: rotate(-45deg);
 }
 
@@ -138,14 +268,21 @@
     transform: translateX(-100px);
     opacity: 0;
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    will-change: transform, box-shadow;
 }
-
-.resume-download-btn:hover {
-    background-color: transparent;
+.resume-download-btn:hover, .resume-download-btn:focus {
+    background-color: var(--amber);
     color: var(--primary);
     text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px) scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 24px var(--amber);
+    outline: none;
+}
+.resume-download-btn:active {
+    transform: scale(0.98) translateY(1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
 .resume-download-btn.animate-in {
@@ -180,15 +317,21 @@
     background-color: var(--primary);
     color: var(--yellow);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(.4,2,.6,1);
     border: 2px solid var(--primary);
+    cursor: pointer;
+    will-change: transform, box-shadow, background, color;
 }
-
-.social-link:hover {
-    background-color: transparent;
+.social-link:hover, .social-link:focus {
+    background-color: var(--amber);
     color: var(--primary);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.08) translateY(-4px) rotate(-2deg);
+    box-shadow: 0 8px 24px var(--amber);
+    outline: none;
+}
+.social-link:active {
+    transform: scale(0.96) translateY(1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
 .social-link svg {
