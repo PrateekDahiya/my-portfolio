@@ -4,68 +4,81 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--yellow);
+    background: rgba(245, 192, 0, 0.10);
+    backdrop-filter: blur(4px);
     display: flex;
     justify-content: center;
-    align-items: center; /* Keep centered to avoid going off screen entirely */
-    z-index: 2000; /* Ensure it's above other content */
-    /* Removed overflow-y: auto here, as content handles its own scrolling */
+    align-items: center;
+    z-index: 2000;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .project-modal-content {
-    background-color: var(--yellow); /* Match background with main site */
+    background: #fff;
     color: var(--primary);
-    padding: 40px; /* Increased top padding significantly */
-    border-radius: 8px;
-    max-width: 90%; /* Use percentage for responsiveness */
-    width: auto;
+    padding: 32px;
+    border-radius: 14px;
+    max-width: 800px;
+    width: 100%;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 24px 0 rgba(26,54,133,0.10);
     display: flex;
     flex-direction: column;
-    max-height: 95vh; /* Allow more content space vertically */
-    overflow-y: auto; /* Keep content scrollable */
+    max-height: 90vh;
+    overflow-y: auto;
     box-sizing: border-box;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
 }
-
 .project-modal-content::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
+    display: none;
 }
 
 .project-modal-close {
     position: absolute;
-    top: 5px; /* Closer to the top edge */
-    right: 5px; /* Closer to the right edge */
-    background-color: #ffa3a3; /* Solid red background */
+    top: 14px;
+    right: 14px;
+    background: var(--amber);
+    border: none;
     border-radius: 50%;
-    width: 60px; /* Even larger width */
-    height: 60px; /* Even larger height */
+    width: 38px;
+    height: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem; /* Extremely large font size for visibility */
+    font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    color: #ffffff; /* White color for the X */
-    z-index: 10000; /* Extremely high z-index to guarantee visibility */
-    transition: all 0.3s ease;
-    line-height: 1;
+    color: var(--jacksons-purple);
+    z-index: 10000;
+    transition: background 0.18s, color 0.18s;
+    box-shadow: 0 1px 4px var(--amber);
+    outline: none;
 }
-
-.project-modal-close:hover {
-    background-color: #cc0000;
-    border-color: #333333; /* Darker border on hover */
+.project-modal-close:hover, .project-modal-close:focus {
+    background: var(--jacksons-purple);
+    color: var(--amber);
 }
 
 .project-modal-title {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 1.6rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
-    /* No specific top padding here, handled by modal content padding */
+    color: var(--jacksons-purple);
+    letter-spacing: 0.5px;
+    text-align: left;
+    position: relative;
+}
+.project-modal-title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 36px;
+    height: 3px;
+    background: var(--amber);
+    border-radius: 2px;
 }
 
 .project-modal-subtitle {
@@ -83,12 +96,16 @@
 
 .project-modal-image {
     width: 100%;
-    height: auto;
-    max-height: 400px; /* Limit max height of the image */
-    object-fit: contain; /* Use contain to ensure whole image is visible */
-    margin-bottom: 1.5rem;
-    border-radius: 4px;
-    /* Removed border: 2px solid green; */
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px 0 rgba(26,54,133,0.08);
+    transition: box-shadow 0.2s, transform 0.2s cubic-bezier(.4,2,.6,1);
+}
+.project-modal-image:hover, .project-modal-image:focus {
+    box-shadow: 0 4px 12px var(--amber);
+    transform: scale(1.02);
 }
 
 .project-modal-date {
@@ -120,15 +137,22 @@
 .project-modal-links .project-link {
     display: inline-block;
     margin-right: 1rem;
-    color: var(--primary);
-    text-decoration: underline;
+    color: var(--jacksons-purple);
+    background: none;
+    border: 2px solid var(--amber);
+    border-radius: 8px;
+    padding: 0.4em 1em;
     font-weight: 600;
     margin-bottom: 1rem;
-    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+    box-shadow: none;
 }
-
-.project-modal-links .project-link:hover {
-    color: var(--cyan);
+.project-modal-links .project-link:hover, .project-modal-links .project-link:focus {
+    background: var(--amber);
+    color: var(--jacksons-purple);
+    border-color: var(--jacksons-purple);
+    outline: none;
 }
 
 .navigation-sidebar {

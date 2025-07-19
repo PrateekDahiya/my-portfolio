@@ -26,9 +26,42 @@
 .about-text {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--text-color);
+    color: var(--jacksons-purple);
     margin-bottom: 1.5rem;
     text-align: left;
+    transition: transform 0.18s, letter-spacing 0.18s;
+}
+.about-text:hover, .about-text:focus {
+    color: var(--jacksons-purple);
+    transform: scale(1.015);
+    letter-spacing: 0.5px;
+}
+
+.about-text a {
+    color: var(--jacksons-purple);
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.18s;
+}
+.about-text a:hover, .about-text a:focus {
+    color: var(--jacksons-purple);
+    outline: none;
+    transform: scale(1.06);
+}
+.about-text a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--amber), var(--primary));
+    border-radius: 2px;
+    transition: width 0.35s cubic-bezier(.4,2,.6,1);
+}
+.about-text a:hover::after, .about-text a:focus::after {
+    width: 100%;
 }
 
 /* Responsive styles */

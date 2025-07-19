@@ -59,19 +59,19 @@ form {
 .form-control {
     width: 100%;
     padding: 1rem;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--gull-gray);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.93);
+    color: var(--jacksons-purple);
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.18s, background 0.18s, transform 0.18s cubic-bezier(.4,2,.6,1);
     margin-bottom: 1rem;
 }
-
 .form-control:focus {
-    border-color: var(--primary);
+    border-color: var(--amber);
+    background: #fff;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    transform: scale(1.03);
 }
 
 textarea.form-control {
@@ -99,16 +99,28 @@ textarea.form-control {
 }
 
 .btn-primary {
-    background-color: var(--primary);
-    color: var(--yellow);
-    border: 2px solid var(--primary);
+    background-color: var(--jacksons-purple);
+    color: var(--amber);
+    border: 2px solid var(--jacksons-purple);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.18s cubic-bezier(.4,2,.6,1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: none;
+    width: 50%;
+    padding: 1rem 1rem;
 }
-
-.btn-primary:hover {
-    background-color: transparent;
-    color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--jacksons-purple);
+    color: var(--amber);
+    border-color: var(--jacksons-purple);
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+    transform: scale(1.06);
+    letter-spacing: 2px;
 }
 
 /* Form Row Spacing */
@@ -125,12 +137,32 @@ form .col-md-6 {
 .contact-links {
     padding: 5px;
     border-radius: 10px;
+    color: var(--jacksons-purple);
+    background: none;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.18s, background 0.18s;
 }
-
-.contact-links:hover {
-    background-color: var(--yellow);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.contact-links:hover, .contact-links:focus {
+    color: var(--amber);
+    background: none;
+    outline: none;
+}
+.contact-links::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--amber), var(--primary));
+    border-radius: 2px;
+    transition: width 0.35s cubic-bezier(.4,2,.6,1);
+}
+.contact-links:hover::after, .contact-links:focus::after {
+    width: 100%;
 }
 
 /* a {
@@ -263,7 +295,7 @@ textarea.form-control {
 }
 
 .btn-primary {
-    background-color: var(--primary);
+    background-color: var(--jacksons-purple);
     width: 50%;
     color: white;
     padding: 1rem 1rem;
@@ -278,9 +310,11 @@ textarea.form-control {
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--amber);
+    color: var(--jacksons-purple);
+    border-color: var(--amber);
+    outline: none;
+    transform: scale(1.04);
 }
 
 .mb-3 {
@@ -446,14 +480,17 @@ textarea.form-control {
     cursor: pointer;
     padding: 0;
     margin-left: 1rem;
-    color: inherit;
+    color: var(--jacksons-purple);
     opacity: 0.7;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.18s, color 0.18s, transform 0.18s cubic-bezier(.4,2,.6,1);
     line-height: 1;
+    outline: none;
 }
-
-.alert-close:hover {
+.alert-close:hover, .alert-close:focus {
     opacity: 1;
+    color: var(--amber);
+    transform: scale(1.18) rotate(8deg);
+    outline: none;
 }
 
 @keyframes slideIn {

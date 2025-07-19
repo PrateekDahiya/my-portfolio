@@ -33,12 +33,35 @@
 }
 
 .sections-nav-link {
-    display: block;
+    display: inline-block;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    color: #000;
+    color: var(--jacksons-purple);
     font-weight: 700;
-    transition: color 0.3s ease;
+    position: relative;
+    transition: color 0.18s, background 0.18s;
+    outline: none;
+}
+.sections-nav-link:hover, .sections-nav-link:focus {
+    color: var(--jacksons-purple);
+    background: none;
+    outline: none;
+}
+.sections-nav-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 1.5px;
+    background: linear-gradient(90deg, var(--amber), var(--primary));
+    border-radius: 2px;
+    transition: width 0.35s cubic-bezier(.4,2,.6,1);
+}
+.sections-nav-link:hover::after, .sections-nav-link:focus::after {
+    width: 100%;
 }
 
 .sections-nav-counter {

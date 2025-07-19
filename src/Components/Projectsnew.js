@@ -228,7 +228,15 @@ const Projectsnew = () => {
             </h2>
             <div className=" projects-grid animation-translate animation-item-2">
                 {projectDetails.map((project, index) => (
-                    <div key={index} className="project-card">
+                    <div
+                        key={index}
+                        className="project-card"
+                        onClick={() => openModal(project)}
+                        tabIndex={0}
+                        role="button"
+                        aria-label={`Open details for ${project.title}`}
+                        onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') openModal(project); }}
+                    >
                         <div className="project-image-container">
                             <img
                                 src={`/assets/img/${project.image}`}
@@ -253,11 +261,12 @@ const Projectsnew = () => {
                             </div>
                             <button
                                 className="project-fab"
-                                onClick={(e) => {
+                                onClick={e => {
                                     e.stopPropagation();
                                     window.open(project.links[0].url, "_blank");
                                 }}
                                 title="Open project"
+                                tabIndex={0}
                             >
                                 <svg
                                     width="24"
@@ -275,10 +284,6 @@ const Projectsnew = () => {
                                 </svg>
                             </button>
                         </div>
-                        <div
-                            className="project-overlay"
-                            onClick={() => openModal(project)}
-                        ></div>
                     </div>
                 ))}
             </div>
