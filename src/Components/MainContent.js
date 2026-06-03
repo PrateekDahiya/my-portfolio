@@ -2,9 +2,9 @@ import React from 'react';
 import Hero from './Hero';
 import About from './About';
 import Education from './Education';
+import Experience from './Experience';
 import Skills from './Skills';
 // import Facts from './Facts';
-// import Experience from './Experience';
 import Projects from './Projects';
 import Extracurriculars from './Extracurriculars';
 import Achievements from './Achievements';
@@ -19,13 +19,12 @@ const MainContent = () => {
             <Hero />
             <About />
             <Education />
-            {/* <Projects /> */}
+            <Experience />
             <Projectsnew/>
             <Skills />
+            <Achievements />
             {/* <Facts /> */}
-            {/* <Experience /> */}
             {/* <Extracurriculars /> */}
-            {/* <Achievements /> */}
             <Contact />
     </main>
   );

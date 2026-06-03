@@ -5,7 +5,15 @@ const Achievements = () => {
     const achievementsDetails = [
         {
             title: "Problem Solving",
-            description: "Solved 200+ questions on numerous platforms(LeetCode, Coding Studios, GFG etc)"
+            description: "Solved 200+ questions on coding platforms (LeetCode, GeeksforGeeks)"
+        },
+        {
+            title: "Adobe India Hackathon",
+            description: "Cleared 2 rounds in the national-level Adobe India Hackathon"
+        },
+        {
+            title: "Flipkart GRiD 6.0",
+            description: "Successfully cleared 2 rounds of the Flipkart GRiD 6.0 competition"
         }
     ];
 
@@ -40,4 +48,4 @@ const Achievements = () => {
     );
 };
 
-export default Achievements; 
+export default Achievements;

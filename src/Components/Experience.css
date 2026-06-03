@@ -24,11 +24,31 @@
 .experience-timeline-item h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
-.experience-timeline-item .experience-description {
-    font-size: 1rem;
+.experience-timeline-item .experience-role {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.experience-timeline-item .experience-location {
+    font-size: 0.95rem;
     color: var(--gray-dark);
-    margin-bottom: 0;
-} 
+    margin-bottom: 1rem;
+}
+
+.experience-timeline-item .experience-highlights {
+    list-style-position: inside;
+    margin: 1rem 0;
+    padding-left: 0;
+}
+
+.experience-timeline-item .experience-highlights li {
+    font-size: 0.95rem;
+    color: var(--gray-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
