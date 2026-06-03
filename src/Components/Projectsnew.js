@@ -290,7 +290,7 @@ const Projectsnew = () => {
 
             <div className="section-footer animation-translate animation-item-3">
                 <a className="section-next goto-section" href="#Skills">
-                    <span className="section-next-counter">05/06</span>
+                    <span className="section-next-counter">06/08</span>
                     <span className="section-next-label">Next chapter</span>
                     <span className="section-next-icon"></span>
                 </a>

@@ -22,11 +22,11 @@
 }
 
 .align-items-center {
-    align-items: right;
+    align-items: center;
 }
 
 .justify-content-between {
-    justify-content: right;
+    justify-content: space-between;
 }
 
 .header-brand {

@@ -147,7 +147,7 @@ const Contact = () => {
                 <h2
                     className={`section-title animation-translate animation-item-${animationItemCounter++}`}
                 >
-                    Leave a message
+                    💬 Let's Connect
                 </h2>
                 <form
                     ref={form}
