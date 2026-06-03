@@ -3,12 +3,24 @@ import "./Skills.css";
 
 const Skills = () => {
     const skills = [
-        // Frontend
+        // Languages
         {
-            name: "HTML/CSS",
-            url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-            description: "Markup & styling",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+            name: "Java",
+            url: "https://www.java.com/",
+            description: "Backend development",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        },
+        {
+            name: "Kotlin",
+            url: "https://kotlinlang.org/",
+            description: "JVM language",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+        },
+        {
+            name: "Python",
+            url: "https://www.python.org/",
+            description: "Scripting & ML",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
         },
         {
             name: "JavaScript",
@@ -16,6 +28,14 @@ const Skills = () => {
             description: "Client-side logic",
             logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         },
+        {
+            name: "C/C++",
+            url: "https://cplusplus.com/",
+            description: "Systems programming",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+        },
+
+        // Frontend
         {
             name: "React JS",
             url: "https://react.dev/",
@@ -28,8 +48,26 @@ const Skills = () => {
             description: "React framework",
             logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
         },
+        {
+            name: "Tailwind CSS",
+            url: "https://tailwindcss.com/",
+            description: "Styling framework",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+        },
+        {
+            name: "HTML/CSS",
+            url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+            description: "Markup & styling",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        },
 
         // Backend
+        {
+            name: "Spring Boot",
+            url: "https://spring.io/projects/spring-boot",
+            description: "Java framework",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+        },
         {
             name: "Node JS",
             url: "https://nodejs.org/",
@@ -42,8 +80,20 @@ const Skills = () => {
             description: "Web framework",
             logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
         },
+        {
+            name: "Flask",
+            url: "https://flask.palletsprojects.com/",
+            description: "Python framework",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+        },
 
-        // Database
+        // Databases
+        {
+            name: "PostgreSQL",
+            url: "https://www.postgresql.org/",
+            description: "SQL database",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        },
         {
             name: "MongoDB",
             url: "https://www.mongodb.com/",
@@ -56,13 +106,51 @@ const Skills = () => {
             description: "Relational DB",
             logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
         },
+        {
+            name: "Redis",
+            url: "https://redis.io/",
+            description: "Cache & DB",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+        },
 
-        // Tools
+        // Cloud & DevOps
+        {
+            name: "AWS",
+            url: "https://aws.amazon.com/",
+            description: "Cloud services",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+        },
+        {
+            name: "Docker",
+            url: "https://www.docker.com/",
+            description: "Containerization",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        },
+        {
+            name: "Google Cloud",
+            url: "https://cloud.google.com/",
+            description: "Cloud platform",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+        },
+
+        // Tools & Others
         {
             name: "Git",
             url: "https://git-scm.com/",
             description: "Version control",
             logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        },
+        {
+            name: "GitHub",
+            url: "https://github.com/",
+            description: "Repository hosting",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        },
+        {
+            name: "Maven",
+            url: "https://maven.apache.org/",
+            description: "Build automation",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg",
         },
     ];
 
@@ -112,8 +200,8 @@ const Skills = () => {
             <div
                 className={`section-footer animation-translate animation-item-${animationItemCounter++}`}
             >
-                <a className="section-next goto-section" href="#Contact">
-                    <span className="section-next-counter">06/06</span>
+                <a className="section-next goto-section" href="#Achievements">
+                    <span className="section-next-counter">06/08</span>
                     <span className="section-next-label">Next chapter</span>
                     <span className="section-next-icon"></span>
                 </a>

@@ -4,14 +4,16 @@ import './Experience.css';
 const Experience = () => {
     const experiences = [
         {
-            year: "2018 - now",
-            title: "Freelance",
-            description: "Full stack web developer"
-        },
-        {
-            year: "2015 - 2018",
-            title: "Facebook",
-            description: "Senior front-end coder, team leader"
+            year: "January 2026 - May 2026",
+            title: "Leap Finance",
+            role: "Software Engineering Intern",
+            location: "Bengaluru, Karnataka",
+            highlights: [
+                "Contributed 300+ commits across 9 microservices, leading the migration of 6 core backend services to Java 21 and Spring Boot 3",
+                "Built a unified CRM microservice (leap-crm-v2) by consolidating 3 legacy services, integrating AWS Secrets Manager and Liquibase",
+                "Developed WhatsApp group management APIs and enhanced system security by reducing Amazon S3 presigned URL signature duration from 900 minutes to 15 minutes",
+                "Established Bitbucket CI/CD pipelines and resolved 100+ SonarQube code smells and bugs, significantly improving overall system reliability"
+            ]
         }
     ];
 
@@ -29,7 +31,13 @@ const Experience = () => {
                                 <div key={index} className={`experience-timeline-item animation-translate animation-item-${experienceAnimationItem}`}>
                                     <p className={`experience-year animation-translate animation-item-${animationItemCounter++}`}>{exp.year}</p>
                                     <h3 className={`animation-translate animation-item-${animationItemCounter++}`}>{exp.title}</h3>
-                                    <p className={`experience-description animation-translate animation-item-${animationItemCounter++}`}>{exp.description}</p>
+                                    <p className={`experience-role animation-translate animation-item-${animationItemCounter++}`}>{exp.role}</p>
+                                    <p className={`experience-location animation-translate animation-item-${animationItemCounter++}`}>{exp.location}</p>
+                                    <ul className={`experience-highlights animation-translate animation-item-${animationItemCounter++}`}>
+                                        {exp.highlights.map((highlight, i) => (
+                                            <li key={i} className={`animation-translate animation-item-${animationItemCounter++}`}>{highlight}</li>
+                                        ))}
+                                    </ul>
                                 </div>
                             );
                         })}
@@ -37,8 +45,8 @@ const Experience = () => {
                 </div>
             </div>
             <div className={`section-footer animation-translate animation-item-${animationItemCounter++}`}>
-                <a className="section-next goto-section" href="#Extracurricular">
-                    <span className="section-next-counter">06/08</span>
+                <a className="section-next goto-section" href="#Skills">
+                    <span className="section-next-counter">05/08</span>
                     <span className="section-next-label">Next chapter</span>
                     <span className="section-next-icon"></span>
                 </a>
@@ -47,4 +55,4 @@ const Experience = () => {
     );
 };
 
-export default Experience; 
+export default Experience;
