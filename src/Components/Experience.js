@@ -45,7 +45,7 @@ const Experience = () => {
                 </div>
             </div>
             <div className={`section-footer animation-translate animation-item-${animationItemCounter++}`}>
-                <a className="section-next goto-section" href="#Skills">
+                <a className="section-next goto-section" href="#Projects">
                     <span className="section-next-counter">05/08</span>
                     <span className="section-next-label">Next chapter</span>
                     <span className="section-next-icon"></span>

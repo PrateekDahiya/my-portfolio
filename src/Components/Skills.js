@@ -201,7 +201,7 @@ const Skills = () => {
                 className={`section-footer animation-translate animation-item-${animationItemCounter++}`}
             >
                 <a className="section-next goto-section" href="#Achievements">
-                    <span className="section-next-counter">06/08</span>
+                    <span className="section-next-counter">07/08</span>
                     <span className="section-next-label">Next chapter</span>
                     <span className="section-next-icon"></span>
                 </a>

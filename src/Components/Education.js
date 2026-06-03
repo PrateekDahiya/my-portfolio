@@ -37,8 +37,8 @@ const Education = () => {
                 </div>
             </div>
             <div className={`section-footer animation-translate animation-item-${7 + educationDetails.length * 2 }`}>
-                <a className="section-next goto-section" href="#Projects">
-                    <span className="section-next-counter">04/06</span>
+                <a className="section-next goto-section" href="#Experience">
+                    <span className="section-next-counter">04/08</span>
                     <span className="section-next-label">Next chapter</span>
                     <span className="section-next-icon"></span>
                 </a>
