@@ -9,10 +9,10 @@ const Experience = () => {
             role: "Software Engineering Intern",
             location: "Bengaluru, Karnataka",
             highlights: [
-                "Contributed 300+ commits across 9 microservices, leading the migration of 6 core backend services to Java 21 and Spring Boot 3",
-                "Built a unified CRM microservice (leap-crm-v2) by consolidating 3 legacy services, integrating AWS Secrets Manager and Liquibase",
-                "Developed WhatsApp group management APIs and enhanced system security by reducing Amazon S3 presigned URL signature duration from 900 minutes to 15 minutes",
-                "Established Bitbucket CI/CD pipelines and resolved 100+ SonarQube code smells and bugs, significantly improving overall system reliability"
+                "Led the migration of core backend services to Java 21 and Spring Boot 3, and optimized Docker deployments.",
+                "Built a unified CRM microservice (leap-crm-v2) by consolidating legacy services, integrating AWS Secrets Manager and managing PostgreSQL schemas via Liquibase.",
+                "Developed WhatsApp group management APIs and updated Amazon S3 presigned URL signature duration format from 900 seconds to 15 minutes.",
+                "Established Bitbucket CI/CD pipelines and resolved 100+ SonarQube code smells and bugs, significantly improving overall system reliability."
             ]
         }
     ];
