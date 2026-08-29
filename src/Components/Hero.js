@@ -7,6 +7,7 @@ const Hero = () => {
     const { data, loading } = usePortfolio();
     const [themeColors, setThemeColors] = useState({ primary: "#5227FF", yellow: "#ffdc67c9" });
     const hero = data.hero || {};
+    const resumeUrl = data.profile?.resumeUrl || data.settings?.resumeUrl || hero.resumeUrl || "/assets/documents/Prateek_Dahiya_Resume.pdf";
 
     useEffect(() => {
         if (loading) return;
@@ -85,9 +86,10 @@ const Hero = () => {
                     </div>
 
                     <a
-                        href={hero.resumeUrl || "/assets/documents/Prateek_Dahiya_Resume.pdf"}
+                        href={resumeUrl}
                         className="resume-download-btn hero-animate"
-                        download="Prateek_Dahiya_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Download Resume
                     </a>

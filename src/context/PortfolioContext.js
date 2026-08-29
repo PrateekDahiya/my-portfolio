@@ -28,12 +28,18 @@ export const PortfolioProvider = ({ children }) => {
 
   useEffect(() => {
     fetch(`${API_BASE}/api/portfolio`)
-      .then(r => r.json())
+      .then(r => {
+        if (!r.ok) throw new Error(`Portfolio fetch failed: ${r.status} ${r.statusText}`);
+        return r.json();
+      })
       .then(json => {
         setData(json);
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(err => {
+        console.error('Failed to load portfolio data from API:', err);
+        setLoading(false);
+      });
   }, []);
 
   const authHeaders = token ? { 'Content-Type': 'application/json', 'x-admin-token': token } : { 'Content-Type': 'application/json' };

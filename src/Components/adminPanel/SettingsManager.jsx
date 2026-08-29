@@ -49,10 +49,12 @@ export const SettingsManager = () => {
         <label>SEO / Social Preview Image</label>
         <ImageUploader value={form.seoImage} onChange={v=>change('seoImage',v)} />
       </div>
-      <div className="field-group">
-        <label>Global Resume URL</label>
-        <ImageUploader value={form.resumeUrl} onChange={v=>change('resumeUrl',v)} accept="application/pdf,image/*" />
-      </div>
+      <Input
+        label="Global Resume URL"
+        value={form.resumeUrl}
+        onChange={e=>change('resumeUrl',e.target.value)}
+        placeholder="https://drive.google.com/file/d/..."
+      />
 
       <div className="editor-actions">
         <Button variant="primary" onClick={save}>Save Settings</Button>

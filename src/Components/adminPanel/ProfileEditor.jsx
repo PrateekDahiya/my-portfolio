@@ -76,14 +76,12 @@ export const ProfileEditor = () => {
         <ImageUploader value={form.avatar} onChange={v=>change('avatar',v)} />
       </div>
 
-      <div className="field-group">
-        <label>Resume (PDF or link)</label>
-        <ImageUploader
-          value={form.resumeUrl}
-          onChange={v=>change('resumeUrl',v)}
-          accept="application/pdf,image/*"
-        />
-      </div>
+      <Input
+        label="Resume URL"
+        value={form.resumeUrl}
+        onChange={e=>change('resumeUrl',e.target.value)}
+        placeholder="https://drive.google.com/file/d/..."
+      />
 
       <div className="field-group">
         <label>Social links <span className="hint">(format: Label|URL|icon)</span></label>
