@@ -3,11 +3,27 @@ import { usePortfolio } from "../context/PortfolioContext";
 import "./Hero.css";
 import SplitText from "./SplitText";
 
+const DEFAULT_HERO = {
+    name: "Prateek Dahiya",
+    title: "FULL STACK WEB DEVELOPER",
+    avatar: "/assets/img/avatar.jpg",
+    social: [
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/dahiyaprtk27", icon: "linkedin" },
+        { label: "Instagram", url: "https://www.instagram.com/dahiya_prtk27/", icon: "instagram" },
+        { label: "GitHub", url: "https://github.com/PrateekDahiya", icon: "github" },
+    ],
+    resumeUrl: "/assets/documents/Prateek_Dahiya_Resume.pdf",
+};
+
 const Hero = () => {
     const { data, loading } = usePortfolio();
     const [themeColors, setThemeColors] = useState({ primary: "#5227FF", yellow: "#ffdc67c9" });
     const hero = data.hero || {};
-    const resumeUrl = data.profile?.resumeUrl || data.settings?.resumeUrl || hero.resumeUrl || "/assets/documents/Prateek_Dahiya_Resume.pdf";
+    const name = hero.name || DEFAULT_HERO.name;
+    const title = hero.title || DEFAULT_HERO.title;
+    const avatar = hero.avatar || DEFAULT_HERO.avatar;
+    const social = hero.social?.length ? hero.social : DEFAULT_HERO.social;
+    const resumeUrl = data.profile?.resumeUrl || data.settings?.resumeUrl || hero.resumeUrl || DEFAULT_HERO.resumeUrl;
 
     useEffect(() => {
         if (loading) return;
@@ -55,23 +71,23 @@ const Hero = () => {
             <div className="section-body" style={{ position: 'relative', zIndex: 1 }}>
                 <div className="jumbotron jumbotron-fluid pt-6 pt-lg-8 pb-0 mb-0">
                     <img
-                        src={hero.avatar || "/assets/img/avatar.jpg"}
+                        src={avatar}
                         className="jumbotron-img hero-animate"
                         alt="Avatar"
                     />
                     <span className="display-1 hero-animate">
                         <br />
-                        {hero.name?.split(' ')[0] || "Prateek"}
+                        {name.split(' ')[0]}
                         <br />
-                        {hero.name?.split(' ').slice(1).join(' ') || "Dahiya"}
+                        {name.split(' ').slice(1).join(' ')}
                     </span>
                     <span className="lead hero-animate">
                         <br/>
-                        {hero.title || "FULL STACK WEB DEVELOPER"}
+                        {title}
                     </span>
 
                     <div className="social-links hero-animate">
-                        {(hero.social || []).map((s, i) => (
+                        {social.map((s, i) => (
                             <a
                                 key={i}
                                 href={s.url}
