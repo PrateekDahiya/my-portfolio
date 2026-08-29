@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import { AdminLayout } from './Components/adminPanel/AdminLayout';
 import { AdminLogin } from './Components/adminPanel/AdminLogin';
 import { Dashboard } from './Components/adminPanel/Dashboard';
+import { HeroEditor } from './Components/adminPanel/HeroEditor';
 import { ProfileEditor } from './Components/adminPanel/ProfileEditor';
 import { AboutEditor } from './Components/adminPanel/AboutEditor';
 import { ExperienceManager } from './Components/adminPanel/ExperienceManager';
@@ -73,6 +74,7 @@ function AdminRoutes() {
       <Route path="login" element={<AdminLogin />} />
       <Route element={<AdminLayout />}>
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="hero" element={<HeroEditor />} />
         <Route path="profile" element={<ProfileEditor />} />
         <Route path="about" element={<AboutEditor />} />
         <Route path="experience" element={<ExperienceManager />} />

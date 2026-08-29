@@ -6,6 +6,7 @@ import './AdminLayout.css';
 
 const sections = [
   { key: 'dashboard', label: 'Dashboard', icon: '📊' },
+  { key: 'hero', label: 'Hero', icon: '🏠' },
   { key: 'profile', label: 'Profile', icon: '👤' },
   { key: 'about', label: 'About', icon: '📝' },
   { key: 'experience', label: 'Experience', icon: '💼' },
