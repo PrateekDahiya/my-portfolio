@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { usePortfolio } from '../../context/PortfolioContext';
 import { Button } from '../ui/Button';
 import { Input } from '../ui/Input';
 import './AdminLogin.css';
 
 export const AdminLogin = () => {
-  const { login } = usePortfolio();
+  const { login, token } = usePortfolio();
+  const navigate = useNavigate();
   const [form, setForm] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  if (token) return <Navigate to="/admin/dashboard" replace />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,6 +20,7 @@ export const AdminLogin = () => {
     setLoading(true);
     try {
       await login(form.username, form.password);
+      navigate('/admin/dashboard', { replace: true });
     } catch (err) {
       setError(err.message);
     } finally {

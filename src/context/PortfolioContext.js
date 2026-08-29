@@ -42,6 +42,21 @@ export const PortfolioProvider = ({ children }) => {
       });
   }, []);
 
+  useEffect(() => {
+    const settings = data.settings;
+    if (!settings) return;
+    if (settings.siteTitle) document.title = settings.siteTitle;
+    if (settings.siteDescription) {
+      let meta = document.querySelector('meta[name="description"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', 'description');
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', settings.siteDescription);
+    }
+  }, [data.settings]);
+
   const authHeaders = token ? { 'Content-Type': 'application/json', 'x-admin-token': token } : { 'Content-Type': 'application/json' };
 
   const updateSection = async (section, content) => {
