@@ -1,0 +1,6 @@
+.about-editor { display:flex; flex-direction:column; gap:1.25rem; max-width:720px; }
+.editor-header h2 { margin:0; }
+.field-group { display:flex; flex-direction:column; gap:.4rem; }
+.repeater-row { display:flex; gap:.5rem; align-items:flex-start; }
+.repeater-row > * { flex:1; }
+.editor-actions { display:flex; justify-content:flex-end; }

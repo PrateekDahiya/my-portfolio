@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "dahiya-prtk",
+    "site": "dahiya-prtk-portfolio",
     "public": "build",
     "ignore": [
       "firebase.json",

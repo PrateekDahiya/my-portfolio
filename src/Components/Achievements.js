@@ -1,21 +1,25 @@
 import React from 'react';
+import { usePortfolio } from '../context/PortfolioContext';
 import './Achievements.css';
 
+const DEFAULT_ACHIEVEMENTS = [
+    {
+        title: "Problem Solving",
+        description: "Solved 200+ questions on coding platforms (LeetCode, GeeksforGeeks)"
+    },
+    {
+        title: "Adobe India Hackathon",
+        description: "Cleared 2 rounds in the national-level Adobe India Hackathon"
+    },
+    {
+        title: "Flipkart GRiD 6.0",
+        description: "Successfully cleared 2 rounds of the Flipkart GRiD 6.0 competition"
+    }
+];
+
 const Achievements = () => {
-    const achievementsDetails = [
-        {
-            title: "Problem Solving",
-            description: "Solved 200+ questions on coding platforms (LeetCode, GeeksforGeeks)"
-        },
-        {
-            title: "Adobe India Hackathon",
-            description: "Cleared 2 rounds in the national-level Adobe India Hackathon"
-        },
-        {
-            title: "Flipkart GRiD 6.0",
-            description: "Successfully cleared 2 rounds of the Flipkart GRiD 6.0 competition"
-        }
-    ];
+    const { data } = usePortfolio();
+    const achievementsDetails = data.achievements?.items?.length ? data.achievements.items : DEFAULT_ACHIEVEMENTS;
 
     let animationItemCounter = 3; // Start counter after title and row
 

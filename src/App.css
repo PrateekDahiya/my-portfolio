@@ -22,6 +22,26 @@
     --lighter: #fcf8ef;
     --darker: #6c5e41;
     --yellow: #f5c000;
+
+    /* Admin panel theme */
+    --primary-dark: #12245c;
+    --primary-focus: rgba(26, 54, 133, 0.18);
+    --bg-page: #f6f7fb;
+    --bg-sidebar: #ffffff;
+    --bg-card: #ffffff;
+    --bg-secondary: #f1f3f9;
+    --bg-header: #ffffff;
+    --bg-hover: #eef1f8;
+    --bg-input: #ffffff;
+    --bg-tag: #eef1f8;
+    --border-color: #e3e6ee;
+    --text-primary: #1a1d29;
+    --text-secondary: #4b5165;
+    --error-color: #e5484d;
+    --shadow-card: 0 4px 12px rgba(20, 25, 50, 0.06);
+    --shadow-card-hover: 0 12px 28px rgba(20, 25, 50, 0.12);
+    --shadow-toast: 0 10px 30px rgba(20, 25, 50, 0.18);
+    --shadow-modal: 0 24px 48px rgba(20, 25, 50, 0.22);
 }
 
 body {

@@ -1,0 +1,3 @@
+/* AchievementsForm uses Modal, fields stack vertically */
+.field-group { display:flex; flex-direction:column; gap:.4rem; margin-bottom:1rem; }
+.editor-actions { display:flex; justify-content:flex-end; gap:.5rem; margin-top:1rem; }

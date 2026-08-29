@@ -1,8 +1,25 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import { usePortfolio } from "../context/PortfolioContext";
 import "./Contact.css";
 
+const DEFAULT_CONTACT = {
+    email: "dahiyaprateek27@gmail.com",
+    phone: "+918307434738",
+    social: [
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/dahiyaprtk27" },
+        { label: "GitHub", url: "https://github.com/PrateekDahiya" },
+        { label: "Instagram", url: "https://www.instagram.com/dahiya_prtk27/" },
+    ],
+    emailjs: { serviceId: "service_17o88so", templateId: "template_ph2enxb", publicKey: "zqDodEPIXAY9UzD7N" },
+};
+
 const Contact = () => {
+    const { data } = usePortfolio();
+    const contact = data.contact?.email ? data.contact : DEFAULT_CONTACT;
+    const social = contact.social?.length ? contact.social : DEFAULT_CONTACT.social;
+    const ejsConfig = contact.emailjs?.serviceId ? contact.emailjs : DEFAULT_CONTACT.emailjs;
+
     let animationItemCounter = 3;
     const form = useRef();
     const [formData, setFormData] = useState({
@@ -40,14 +57,8 @@ const Contact = () => {
         // Log form data for debugging
         console.log("Form data being sent:", formData);
 
-        // EmailJS configuration
-        // You'll need to replace these with your actual EmailJS credentials
-        const serviceId = "service_17o88so";
-        const templateId = "template_ph2enxb";
-        const publicKey = "zqDodEPIXAY9UzD7N";
-
         emailjs
-            .sendForm(serviceId, templateId, form.current, publicKey)
+            .sendForm(ejsConfig.serviceId, ejsConfig.templateId, form.current, ejsConfig.publicKey)
             .then(
                 (result) => {
                     console.log("SUCCESS!", result.text);
@@ -90,16 +101,16 @@ const Contact = () => {
                         >
                             <a
                                 className="contact-links"
-                                href="mailto:dahiyaprateek27@gmail.com"
+                                href={`mailto:${contact.email}`}
                             >
-                                dahiyaprateek27@gmail.com
+                                {contact.email}
                             </a>
                             <br />
                             <a
                                 className="contact-links"
-                                href="tel:+918307434738"
+                                href={`tel:${contact.phone}`}
                             >
-                                +91 8307434738
+                                {contact.phone}
                             </a>
                         </p>
                     </div>
@@ -114,32 +125,19 @@ const Contact = () => {
                         <p
                             className={`animation-translate animation-item-${animationItemCounter++}`}
                         >
-                            <a
-                                className="contact-links"
-                                href="https://www.linkedin.com/in/dahiyaprtk27"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                LinkedIn
-                            </a>
-                            <br />
-                            <a
-                                className="contact-links"
-                                href="https://github.com/PrateekDahiya"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                GitHub
-                            </a>
-                            <br />
-                            <a
-                                className="contact-links"
-                                href="https://www.instagram.com/dahiya_prtk27/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Instagram
-                            </a>
+                            {social.map((s, i) => (
+                                <React.Fragment key={i}>
+                                    <a
+                                        className="contact-links"
+                                        href={s.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {s.label}
+                                    </a>
+                                    {i < social.length - 1 && <br />}
+                                </React.Fragment>
+                            ))}
                         </p>
                     </div>
                 </div>

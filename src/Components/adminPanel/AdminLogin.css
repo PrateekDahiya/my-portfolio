@@ -1,0 +1,50 @@
+.admin-login { 
+  min-height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 1rem; 
+  background: linear-gradient(135deg, var(--bg-page) 0%, var(--bg-secondary) 100%);
+}
+.admin-login__card { 
+  width: 100%; 
+  max-width: 420px; 
+  background: var(--bg-card); 
+  border: 1px solid var(--border-color); 
+  border-radius: 16px; 
+  padding: 2.5rem; 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 0 1px var(--border-color);
+}
+.admin-login__card h2 { 
+  margin: 0 0 0.5rem; 
+  text-align: center; 
+  font-size: 1.75rem; 
+  font-weight: 700; 
+  color: var(--text-primary);
+}
+.admin-login__card > p {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.admin-login__form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.25rem; 
+}
+.admin-login__error { 
+  margin: 0; 
+  color: var(--error-color, #e5484d); 
+  font-size: 0.875rem; 
+  text-align: center;
+  padding: 0.75rem;
+  background: rgba(229, 72, 77, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(229, 72, 77, 0.2);
+}
+.admin-login__submit { 
+  margin-top: 0.5rem; 
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}

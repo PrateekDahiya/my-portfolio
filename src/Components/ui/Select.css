@@ -1,0 +1,13 @@
+.form-field { display: flex; flex-direction: column; gap: 0.35rem; }
+.form-field__label { font-weight: 600; font-size: 0.85rem; color: var(--text-primary); }
+.required { color: var(--error-color, #e5484d); margin-left: 0.2rem; }
+.form-field__select {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-input);
+  color: var(--text-primary);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-field__select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-focus, rgba(82,39,255,0.2)); }

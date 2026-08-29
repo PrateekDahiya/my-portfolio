@@ -1,0 +1,7 @@
+-- 01_create_tables.sql
+CREATE TABLE IF NOT EXISTS `portfolio_content` (
+    `id`          INT AUTO_INCREMENT PRIMARY KEY,
+    `section`     VARCHAR(100) NOT NULL UNIQUE,
+    `content`     JSON NOT NULL,
+    `updated_at`  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
