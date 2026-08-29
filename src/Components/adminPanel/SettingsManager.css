@@ -1,0 +1,4 @@
+.settings-manager { display:flex; flex-direction:column; gap:1.25rem; max-width:720px; }
+.manager-header h2 { margin:0; }
+.field-group { display:flex; flex-direction:column; gap:.4rem; }
+.editor-actions { display:flex; justify-content:flex-end; margin-top:.5rem; }

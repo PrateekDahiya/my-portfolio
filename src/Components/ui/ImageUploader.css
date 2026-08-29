@@ -1,0 +1,17 @@
+.image-uploader { position: relative; }
+.image-uploader__file { display: none; }
+.image-uploader__dropzone {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 160px; border: 2px dashed var(--border-color); border-radius: 8px;
+  background: var(--bg-input); color: var(--text-muted); cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.image-uploader__dropzone:hover { border-color: var(--primary); background: var(--bg-hover); }
+.image-uploader__dropzone p { margin: 0.5rem 0 0; font-weight: 500; color: var(--text-primary); }
+.image-uploader__dropzone span { font-size: 0.75rem; }
+.image-uploader__preview { position: relative; display: inline-block; border-radius: 8px; overflow: hidden; }
+.image-uploader__preview img { display: block; max-width: 260px; max-height: 180px; }
+.image-uploader__actions { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.5rem; background: rgba(0,0,0,0.6); display: flex; gap: 0.5rem; justify-content: center; }
+.image-uploader__progress { height: 4px; background: var(--border-color); border-radius: 2px; margin-top: 0.5rem; overflow: hidden; }
+.image-uploader__progress > div { height: 100%; background: var(--primary); transition: width 0.2s; }
+.image-uploader__error { margin: 0.5rem 0 0; font-size: 0.8rem; color: var(--error-color, #e5484d); }

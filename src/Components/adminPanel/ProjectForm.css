@@ -1,0 +1,7 @@
+.link-row { display:flex; gap:.5rem; flex-wrap:wrap; align-items:flex-end; }
+.link-row > * { flex:1; min-width:120px; }
+.image-upload-grid { display:flex; flex-wrap:wrap; gap:1rem; }
+.image-slot { display:flex; flex-direction:column; gap:.3rem; flex:1; min-width:200px; }
+.add-image-slot { display:flex; align-items:center; justify-content:center; min-width:200px; border:2px dashed var(--border-color); border-radius:8px; height:120px; background:var(--bg-input); }
+.checkbox-group { display:flex; align-items:center; gap:.5rem; }
+.editor-actions { display:flex; justify-content:flex-end; gap:.5rem; margin-top:1rem; }

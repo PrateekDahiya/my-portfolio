@@ -40,13 +40,15 @@ const ProjectModal = ({ project, onClose }) => {
                                 </a>
                             ))}
                         </div>
-                        <img
-                            src={`/assets/img/${project.image}`}
-                            alt={project.title}
-                            className="img-fluid project-modal-image"
-                        />
+                        {project.image && (
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="img-fluid project-modal-image"
+                            />
+                        )}
                         <ul className="project-modal-description-list">
-                            {project.description.map((desc, i) => (
+                            {(project.description || []).map((desc, i) => (
                                 <li key={i}>{desc}</li>
                             ))}
                         </ul>

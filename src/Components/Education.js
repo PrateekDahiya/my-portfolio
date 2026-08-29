@@ -1,21 +1,25 @@
 import React from 'react';
+import { usePortfolio } from '../context/PortfolioContext';
 import './Education.css';
 
+const DEFAULT_EDUCATION = [
+    {
+        degree: "Bachelor of Technology in Information Technology",
+        institution: "National Institute of Technology Kurukshetra, Haryana",
+        period: "Nov. 2022 – June 2026",
+        details: ["CGPA: 8.00"]
+    },
+    {
+        degree: "High School Diploma in PCM stream",
+        institution: "Rao Pahlad Singh Sr Sec School Mahendergarh, Haryana",
+        period: "April 2018 – April 2022",
+        details: ["Class 12th Percentage: 94% 2022", "Class 10th Percentage: 96.4% 2020"]
+    }
+];
+
 const Education = () => {
-    const educationDetails = [
-        {
-            degree: "Bachelor of Technology in Information Technology",
-            institution: "National Institute of Technology Kurukshetra, Haryana",
-            period: "Nov. 2022 – June 2026",
-            details: "CGPA: 8.00"
-        },
-        {
-            degree: "High School Diploma in PCM stream",
-            institution: "Rao Pahlad Singh Sr Sec School Mahendergarh, Haryana",
-            period: "April 2018 – April 2022",
-            details: "Class 12th Percentage: 94% 2022\nClass 10th Percentage: 96.4% 2020"
-        }
-    ];
+    const { data } = usePortfolio();
+    const educationDetails = data.education?.items?.length ? data.education.items : DEFAULT_EDUCATION;
 
     return (
         <section id="Education" className="section animation interaction-in">
@@ -28,7 +32,7 @@ const Education = () => {
                                 <h3 className={`animation-translate animation-item-${4 + index}`}>{edu.degree}</h3>
                                 <p className={`institution animation-translate animation-item-${5 + index}`}>{edu.institution}</p>
                                 <p className={`period animation-translate animation-item-${6 + index}`}>{edu.period}</p>
-                                {edu.details && edu.details.split('\n').map((detail, i) => (
+                                {edu.details && edu.details.map((detail, i) => (
                                     <p key={i} className={`details animation-translate animation-item-${7 + index + i}`}>{detail}</p>
                                 ))}
                             </div>

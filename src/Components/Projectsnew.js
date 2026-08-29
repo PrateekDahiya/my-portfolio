@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { usePortfolio } from "../context/PortfolioContext";
 import "./Projectsnew.css";
 import ProjectModal from "./ProjectModal";
 
-const Projectsnew = () => {
-    const projectDetails = [
+const DEFAULT_PROJECTS = [
         {
             title: "EduTracker",
             technologies: "Next.js, Tailwind CSS, App Router, Vercel, Google Auth",
@@ -188,7 +188,28 @@ const Projectsnew = () => {
                 },
             ],
         },
-    ];
+];
+
+const resolveImage = (path) => {
+    if (!path) return "";
+    return /^(https?:)?\//.test(path) ? path : `/assets/img/${path}`;
+};
+
+const mapDbProject = (item) => ({
+    title: item.title || "",
+    technologies: (item.technologies || []).join(", "),
+    date: item.date || "",
+    image: resolveImage(item.thumbnail || item.images?.[0]),
+    description: [item.shortDescription, item.fullDescription].filter(Boolean),
+    links: item.links?.length ? item.links : [],
+});
+
+const Projectsnew = () => {
+    const { data } = usePortfolio();
+    const dbItems = data.projects?.items;
+    const projectDetails = dbItems?.length
+        ? dbItems.map(mapDbProject)
+        : DEFAULT_PROJECTS.map(p => ({ ...p, image: resolveImage(p.image) }));
 
     const [showModal, setShowModal] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
@@ -239,7 +260,7 @@ const Projectsnew = () => {
                     >
                         <div className="project-image-container">
                             <img
-                                src={`/assets/img/${project.image}`}
+                                src={project.image}
                                 alt={project.title}
                                 className="project-image"
                             />
@@ -263,7 +284,7 @@ const Projectsnew = () => {
                                 className="project-fab"
                                 onClick={e => {
                                     e.stopPropagation();
-                                    window.open(project.links[0].url, "_blank");
+                                    if (project.links[0]?.url) window.open(project.links[0].url, "_blank");
                                 }}
                                 title="Open project"
                                 tabIndex={0}

@@ -1,16 +1,20 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "version": "1.0.0",
   "private": true,
+  "proxy": "http://localhost:4000",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "cloudinary": "^2.11.0",
+    "dotenv": "^17.4.2",
     "gsap": "^3.13.0",
+    "mysql2": "^3.24.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0",
+    "react-router-dom": "^6.30.6",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -18,7 +22,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "cd server && npm run dev",
+    "dev": "npx concurrently \"npm run server\" \"npm start\"",
+    "migrate": "node scripts/migrate.js"
   },
   "eslintConfig": {
     "extends": [

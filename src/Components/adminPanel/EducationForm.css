@@ -1,0 +1,5 @@
+/* EducationForm uses Modal, fields stack vertically */
+.field-group { display:flex; flex-direction:column; gap:.4rem; margin-bottom:1rem; }
+.repeater-row { display:flex; gap:.5rem; align-items:flex-start; }
+.repeater-row > * { flex:1; }
+.editor-actions { display:flex; justify-content:flex-end; gap:.5rem; margin-top:1rem; }

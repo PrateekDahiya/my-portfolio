@@ -1,8 +1,8 @@
 import React from "react";
+import { usePortfolio } from "../context/PortfolioContext";
 import "./Skills.css";
 
-const Skills = () => {
-    const skills = [
+const DEFAULT_SKILLS = [
         // Languages
         {
             name: "Java",
@@ -152,7 +152,11 @@ const Skills = () => {
             description: "Build automation",
             logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg",
         },
-    ];
+];
+
+const Skills = () => {
+    const { data } = usePortfolio();
+    const skills = data.skills?.items?.length ? data.skills.items : DEFAULT_SKILLS;
 
     let animationItemCounter = 3;
 
