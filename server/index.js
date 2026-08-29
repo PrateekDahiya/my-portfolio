@@ -152,13 +152,7 @@ const PORT = process.env.PORT || 3001;
 const HOST = process.env.HOST || '0.0.0.0';
 const server = app.listen(PORT, HOST, () => {
   console.log(`Portfolio API listening on ${HOST}:${PORT}`);
-  console.log('Server address:', server.address());
 });
 server.on('error', (err) => console.error('Server error:', err));
-server.on('listening', () => console.log('Server listening event fired'));
-server.on('close', () => console.log('Server closed'));
-server.on('connection', (socket) => {
-  console.log('New connection from:', socket.remoteAddress, socket.remotePort);
-});
 process.on('uncaughtException', (err) => console.error('Uncaught exception:', err));
 process.on('unhandledRejection', (err) => console.error('Unhandled rejection:', err));
