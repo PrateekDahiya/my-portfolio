@@ -3,7 +3,7 @@ import { usePortfolio } from "../context/PortfolioContext";
 import "./About.css";
 
 const DEFAULT_PARAGRAPHS = [
-    "Hi, I’m Prateek Dahiya — a Full-Stack Web Developer with a strong foundation in computer science and a focus on building scalable, user-friendly web applications.",
+    "Hi, I’m Prateek Dahiya — a Backend Developer with a strong foundation in computer science and a focus on building scalable, user-friendly web applications.",
     "I create intuitive interfaces and robust back-end systems, applying modern technologies and best practices to solve real-world problems. This portfolio showcases my skills, creativity, and commitment to quality.",
     "Take a look around—and if you're looking to collaborate or build something great, let’s connect.",
 ];

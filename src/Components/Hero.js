@@ -5,18 +5,18 @@ import SplitText from "./SplitText";
 
 const DEFAULT_HERO = {
     name: "Prateek Dahiya",
-    title: "FULL STACK WEB DEVELOPER",
+    title: "BACKEND DEVELOPER",
     avatar: "/assets/img/avatar.jpg",
     social: [
         { label: "LinkedIn", url: "https://www.linkedin.com/in/dahiyaprtk27", icon: "linkedin" },
         { label: "Instagram", url: "https://www.instagram.com/dahiya_prtk27/", icon: "instagram" },
         { label: "GitHub", url: "https://github.com/PrateekDahiya", icon: "github" },
     ],
-    resumeUrl: "/assets/documents/Prateek_Dahiya_Resume.pdf",
+    resumeUrl: "https://drive.google.com/file/d/1jBZ3QUMeYeNkUZKiSIhqbWATS7kIsqfz/view?usp=sharing",
 };
 
 const Hero = () => {
-    const { data, loading } = usePortfolio();
+    const { data } = usePortfolio();
     const [themeColors, setThemeColors] = useState({ primary: "#5227FF", yellow: "#ffdc67c9" });
     const hero = data.hero || {};
     const name = hero.name || DEFAULT_HERO.name;
@@ -25,8 +25,10 @@ const Hero = () => {
     const social = hero.social?.length ? hero.social : DEFAULT_HERO.social;
     const resumeUrl = data.profile?.resumeUrl || data.settings?.resumeUrl || hero.resumeUrl || DEFAULT_HERO.resumeUrl;
 
+    // Hero always renders with real data or these defaults — never gated behind
+    // the portfolio fetch, so it never gets stuck showing "Loading..." if the
+    // API/DB is slow or unreachable.
     useEffect(() => {
-        if (loading) return;
         const elements = document.querySelectorAll(".hero-animate");
         elements.forEach((element) => {
             element.classList.add("animate-in");
@@ -37,9 +39,7 @@ const Hero = () => {
             primary: computed.getPropertyValue('--primary').trim() || "#5227FF",
             yellow: computed.getPropertyValue('--yellow').trim() || "#ffdc67c9"
         });
-    }, [loading]);
-
-    if (loading) return <div className="hero-loading">Loading...</div>;
+    }, []);
 
     const renderSocialIcon = (icon) => {
         switch (icon) {

@@ -5,7 +5,7 @@ import "./Contact.css";
 
 const DEFAULT_CONTACT = {
     email: "dahiyaprateek27@gmail.com",
-    phone: "+918307434738",
+    phone: "+91 8307434738",
     social: [
         { label: "LinkedIn", url: "https://www.linkedin.com/in/dahiyaprtk27" },
         { label: "GitHub", url: "https://github.com/PrateekDahiya" },

@@ -13,7 +13,7 @@ const DEFAULT_EDUCATION = [
         degree: "High School Diploma in PCM stream",
         institution: "Rao Pahlad Singh Sr Sec School Mahendergarh, Haryana",
         period: "April 2018 – April 2022",
-        details: ["Class 12th Percentage: 94% 2022", "Class 10th Percentage: 96.4% 2020"]
+        details: ["Class 12th Percentage: 94% 2022"]
     }
 ];
 

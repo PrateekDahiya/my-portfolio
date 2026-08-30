@@ -4,13 +4,12 @@ import './Experience.css';
 
 const DEFAULT_EXPERIENCES = [
     {
-        year: "January 2026 - May 2026",
+        year: "Jan 2026 - Present",
         title: "Leap Finance",
         role: "Software Engineering Intern",
         location: "Bengaluru, Karnataka",
         highlights: [
             "Led the migration of core backend services to Java 21 and Spring Boot 3, and optimized Docker deployments.",
-            "Built a unified CRM microservice (leap-crm-v2) by consolidating legacy services, integrating AWS Secrets Manager and managing PostgreSQL schemas via Liquibase.",
             "Developed WhatsApp group management APIs and updated Amazon S3 presigned URL signature duration format from 900 seconds to 15 minutes.",
             "Established Bitbucket CI/CD pipelines and resolved 100+ SonarQube code smells and bugs, significantly improving overall system reliability."
         ]

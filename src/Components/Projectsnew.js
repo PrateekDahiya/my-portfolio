@@ -37,25 +37,16 @@ const DEFAULT_PROJECTS = [
             image: "vidvault-screenshot.jpg",
             description: [
                 "Developed a full-stack web application with Flask serving a REST API with React as the frontend.",
-                "YouTube clone with a custom video player, trending pages, and personalized feed algorithms.",
-                "Implemented like/dislike, subscribe, watchlater, and history functionalities.",
+                "YouTube clone with a custom video player, trending pages, and personalized feed algorithms. Implemented like/dislike, subscribe, watchlater, and history functionalities.",
             ],
             links: [
                 {
                     text: "Live",
-                    url: "https://canvas-fulcrum-386304.web.app/",
+                    url: "https://youtube-combine.onrender.com/",
                 },
                 {
-                    text: "GitHub: Frontend",
-                    url: "https://github.com/PrateekDahiya/YouTube-Clone",
-                },
-                {
-                    text: "GitHub: Node Server",
-                    url: "https://github.com/PrateekDahiya/Youtube-clone-server",
-                },
-                {
-                    text: "GitHub: Flask Server",
-                    url: "https://github.com/PrateekDahiya/Flaskapp",
+                    text: "GitHub",
+                    url: "https://github.com/PrateekDahiya/Youtube-combine",
                 },
             ],
         },
@@ -98,28 +89,6 @@ const DEFAULT_PROJECTS = [
                 {
                     text: "GitHub Repository",
                     url: "https://github.com/PrateekDahiya/my-portfolio",
-                },
-            ],
-        },
-        {
-            title: "Realtime AI Chat App",
-            technologies: "Flask, Socket.IO, JavaScript, Groq API, HTML/CSS",
-            date: "June 2025",
-            image: "realtime-chat-screenshot.png",
-            description: [
-                "Built a real-time AI chatbot using Flask and WebSockets with dynamic conversation context handling.",
-                "Integrated Groq API (LLaMA 3) to simulate a custom AI persona with memory and duplicate question filtering.",
-                "Enabled voice input and text-to-speech responses using SpeechRecognition and pyttsx3.",
-                "Deployed on Render with persistent JSON-based chat history and a clean, responsive UI.",
-            ],
-            links: [
-                {
-                    text: "Live",
-                    url: "https://realtimeaichat-1wxn.onrender.com",
-                },
-                {
-                    text: "GitHub Repository",
-                    url: "https://github.com/PrateekDahiya/RealTimeAIchat",
                 },
             ],
         },
